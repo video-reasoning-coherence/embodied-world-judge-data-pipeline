@@ -1,68 +1,129 @@
-# 2. Ingestion — turning a public corpus into a source dataset
+# 2. Source pipeline — corpus → clip → prompt
 
-## What the existing 11 datasets look like
+This is the upstream half: **which corpora, how a clip is cut, and how each of the
+three prompt fields is produced.** The generation stage is separate (`docs/03`).
 
-| dataset | episodes | kind |
-|---|---:|---|
-| agibot_world | 200 | robot |
-| droid | 199 | robot |
-| robotwin | 198 | robot (sim) |
-| gr1_inlab | 171 | robot |
-| egodex_human | 150 | human egocentric |
-| open_x_embodiment | 142 | robot |
-| libero | 100 | robot (sim) |
-| egoscaler_human | 100 | human egocentric |
-| epickitchens_human | 60 | human egocentric |
-| dreamdojo_hv | 47 | robot |
-| egodex | 24 | human egocentric |
-| **total** | **1,391** | |
+## 2.1 Which datasets
 
-All 11 pass `tools/validate_dataset.py` with zero failures and zero warnings —
-that is the bar a new batch has to clear.
+| dataset | episodes | kind | prefix family |
+|---|---:|---|---|
+| agibot_world | 200 | robot | robot |
+| droid | 199 | robot | robot |
+| robotwin | 198 | robot (sim) | robot |
+| gr1_inlab | 171 | robot | robot |
+| egodex_human | 150 | human egocentric | human |
+| open_x_embodiment | 142 | robot | robot |
+| libero | 100 | robot (sim) | robot |
+| egoscaler_human | 100 | human egocentric | human |
+| epickitchens_human | 60 | human egocentric | human |
+| dreamdojo_hv | 47 | robot | robot |
+| egodex | 24 | human egocentric | human |
+| **total** | **1,391** | | |
 
-## The pattern
+The robot/human split matters: it selects which prefix and rewrite template
+family is used (§2.3), and it changes the wording of the refinement prompt
+("gripper" vs "hand").
 
-`examples/` holds three complete, working ingest scripts. They were written for
-different source corpora but follow the same five steps:
+## 2.2 Clip selection and cutting
 
-1. **Pick a source corpus** and enumerate its episodes
-   (`huggingface_hub` + `pyarrow` for LeRobot-style parquet shards).
-2. **Sample episodes deterministically** — `random.seed(42)`, fixed target count.
-   Determinism matters: a re-run must reproduce the same batch.
-3. **Cut a clip** of the required length and pick `init_frame_offset_sec`;
-   write `video.mp4` and `prompt/init_frame.png`.
-4. **Filter on the conditioning frame.** `ingest_egodex_human.py` asks a VLM a
-   single strict yes/no question (*is a human hand clearly visible, fingers or
-   palm, not just a wrist*) and drops the episode if the answer is no.
-   ⚠️ A bad `init_frame.png` poisons every downstream generation from it, so
-   this filter is the highest-leverage step in the whole pipeline.
-5. **Write `summary.json`** with all 11 fields, then run the validator.
+Worked example — `examples/ingest_egodex_human.py`, source
+`yixuan-tan/EgoDex-LeRobot-v3.0`:
 
-## Worked examples in `examples/`
+1. Enumerate episodes from the LeRobot parquet shards; each row carries
+   `from_timestamp` / `to_timestamp` for its segment.
+2. **Keep only segments of 5–10 s** (`if 5.0 <= dur <= 10.0`). Too short and there
+   is no action to judge; too long and the generators cannot cover it.
+3. Cut with `ffmpeg -ss <from> -i <src> -t <duration>` → `video.mp4`.
+4. Extract `init_frame.png` at **t = 0** of the cut clip
+   (`ffmpeg -ss <t> -frames:v 1`).
+5. Record the real duration with `ffprobe` — **not** the requested duration, and
+   write it plus `init_frame_offset_sec` into `summary.json`.
+6. `random.seed(42)` and a fixed `TARGET_TOTAL`, so a re-run reproduces the batch.
 
-| script | source | target | filter |
-|---|---|---|---|
-| `ingest_egodex_human.py` | `yixuan-tan/EgoDex-LeRobot-v3.0` | 150, 5–10 s | VLM: hand visible in init frame |
-| `ingest_egoscaler.py` | EgoScaler | 100 | see script header |
-| `ingest_epickitchens.py` | EPIC-KITCHENS | 60 | see script header |
+### The conditioning-frame filter
 
-Each hard-codes its output root; change the `DATA` constant before running.
+The init frame is what every generator is conditioned on, so a bad frame poisons
+every video made from it. For the human datasets a VLM is asked one strict
+question:
 
-## ⚠️ What is NOT here
+> Is at least one HUMAN HAND clearly visible in this image (egocentric
+> first-person view)? STRICT: needs recognizable fingers/palm; just a wrist or
+> sleeve doesn't count.
 
-**Only 3 of the 11 datasets have a recoverable ingest script.** The other eight —
-`agibot_world`, `droid`, `robotwin`, `gr1_inlab`, `open_x_embodiment`, `libero`,
-`dreamdojo_hv`, `egodex` — were ingested earlier and their selection code is not
-in this repository. For those, the **contract in `docs/01-source-contract.md` and
-the validator are authoritative**; the original selection logic is not documented
-and should not be assumed reproducible.
+If the answer is no, the pipeline **retries at t = 0.3, 0.7, 1.2, 1.8 s** and uses
+the first frame that passes; if none passes the episode is dropped. Report how
+many episodes each filter dropped, and out of what denominator.
 
-If a new batch needs to match one of those eight, treat it as a fresh ingestion
-against the contract rather than as a re-run.
+## 2.3 The three prompt fields
 
-## Prompt fields
+Every record carries `prompt`, `prompt_prefix` and `prompt_rewrite`. They are
+produced differently and must not be conflated.
 
-`prompt` is the base instruction. `prompt_prefix` is a fixed scene-stability
-preamble; `prompt_rewrite` is an LLM rephrasing. Each source episode is generated
-twice per model (`prefix` and `rewrite`), which is why every generated `item_id`
-carries one of those two markers. Keep `prompt` untouched.
+### `prompt` — the refined instruction
+
+Starts from the source corpus's own task label, then is **re-grounded against the
+init frame by a VLM** into a one-line imperative:
+
+> Write a refined ONE-LINE imperative task instruction grounded in this frame:
+> 1. Imperative form, start with verb
+> 2. Name SPECIFIC visible objects (color/shape) and target locations
+> 3. Use "hand" or "left/right hand" (NOT gripper — this is human)
+> 4. NO meta-commentary, NO scene words ("in a kitchen") unless verifiable
+> 5. Real task command not description
+
+Corpus-specific recovery was sometimes needed: `libero` prompts were re-derived
+from the LIBERO benchmark package by mapping each entry to its true `task_index`;
+`gr1_inlab` init frames were VLM-classified into one of 10 humanized task texts
+because the source labels were unusable. The pre-refinement text was preserved as
+`prompt_original` where it existed.
+
+### `prompt_prefix` — a fixed stability preamble
+
+Chosen from `visualizations/prompt_templates.json` in the main repo:
+**5 `robot_prefixes` and 5 `human_prefixes`**; `prefix_id` records which one.
+Example (robot):
+
+> In a fixed robotic workspace, a rigid and physically consistent embodied
+> robotic arm with high stability and no deformation proceeds to
+
+Example (human):
+
+> In a first-person egocentric video, a real human hand starts to
+
+It is prepended at generation time. **`prompt` itself is never overwritten.**
+
+### `prompt_rewrite` — an image-grounded LLM rephrasing
+
+Produced by a **multimodal** call (init frame + instruction), using one of
+5 `robot_rewrite_templates` / 5 `human_rewrite_templates`; `rewrite_id` records
+which. The call is wrapped as:
+
+```text
+wrapper_pre:  "The attached image is the first frame of a {kind} manipulation video."
+<one rewrite template>
+wrapper_suf:  "If the instruction conflicts with the image, prioritize the image.
+               Output ONLY the rewritten prompt."
+Instruction:  <prompt>
+```
+
+Template family version: **v3 (2026-06-16) — action-focused, ≤128 tokens,
+object-locked, completion-state, minimal scene.**
+
+⭐ Because `prompt_rewrite` is image-grounded, it does **not** need regenerating
+when `prompt` is later edited — it was derived from the frame, not from the text.
+
+### Why two conditions
+
+Each source episode is generated twice per model — once from `prompt_prefix` and
+once from `prompt_rewrite` — which is why every generated `item_id` carries a
+`prefix` or `rewrite` marker.
+
+## 2.4 ⚠️ What is NOT here
+
+**Only 3 of the 11 datasets have a recoverable ingest script** (`examples/`).
+The other eight — `agibot_world`, `droid`, `robotwin`, `gr1_inlab`,
+`open_x_embodiment`, `libero`, `dreamdojo_hv`, `egodex` — were ingested earlier
+and their **selection** code is not in this repository. The prompt pipeline in
+§2.3 applies to all of them (the templates and refinement are shared), but the
+episode-selection logic is not documented and **should not be assumed
+reproducible**. Treat a new batch as a fresh ingestion against the contract.

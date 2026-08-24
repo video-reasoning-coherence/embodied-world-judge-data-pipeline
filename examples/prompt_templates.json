@@ -1,0 +1,33 @@
+{
+ "robot_prefixes": [
+  "In a fixed robotic workspace, a rigid and physically consistent embodied robotic arm with high stability and no deformation proceeds to",
+  "In a controlled robotic workspace, a stable rigid robotic arm with no deformation begins to",
+  "Within a fixed embodied manipulation setup, a physically consistent robotic arm proceeds to",
+  "In a robotic workspace, a stable robotic arm",
+  "A rigid, physically plausible robotic arm in the fixed workspace proceeds to"
+ ],
+ "human_prefixes": [
+  "In a first-person egocentric video, a real human hand starts to",
+  "From an egocentric point of view, the person's hand naturally proceeds to",
+  "In a real-world first-person scene, a human hand begins to",
+  "From a head-mounted camera, the person's bare hand starts to",
+  "In an egocentric recording of a person, their hand proceeds to"
+ ],
+ "robot_rewrite_templates": [
+  "Rewrite the instruction as a concise text-to-video prompt (<=100 words, ~128 token hard cap) describing the robot/gripper performing the task action on the locked object (use the object name from the instruction verbatim), through to the completion state. Plain narrative. Keep scene description minimal - focus on what the robot is doing.",
+  "Rewrite the instruction as a text-to-video prompt (<=100 words, ~128 token hard cap) breaking the task into reach -> grasp -> execute -> release/complete on the locked object (object name verbatim), ending in the completion state. Mention scene only briefly if needed for grounding.",
+  "Rewrite the instruction as an imperative text-to-video prompt (<=100 words, ~128 token hard cap) commanding the robot/gripper to execute the task on the locked object (object name verbatim) and finish in the completion state. Use action verbs. Stay action-centric; keep environmental detail spare.",
+  "Rewrite the instruction as a text-to-video prompt (<=100 words, ~128 token hard cap) starting with the action verb, unfolding what the robot/gripper does to the locked object (object name verbatim) through to completion. Keep background mentions brief.",
+  "Rewrite the instruction as a text-to-video prompt (<=100 words, ~128 token hard cap) decomposing into approach -> contact -> completion sub-actions performed by the robot/gripper on the locked object (object name verbatim), ending at the final state. Restrain scene/background detail."
+ ],
+ "human_rewrite_templates": [
+  "Rewrite the instruction as a concise text-to-video prompt (<=100 words, ~128 token hard cap) describing the the person's hand performing the task action on the locked object (use the object name from the instruction verbatim), through to the completion state. Plain narrative. Keep scene description minimal - focus on what the hand is doing.",
+  "Rewrite the instruction as a text-to-video prompt (<=100 words, ~128 token hard cap) breaking the task into reach -> grasp -> execute -> release/complete on the locked object (object name verbatim), ending in the completion state. Mention scene only briefly if needed for grounding.",
+  "Rewrite the instruction as an imperative text-to-video prompt (<=100 words, ~128 token hard cap) commanding the the person's hand to execute the task on the locked object (object name verbatim) and finish in the completion state. Use action verbs. Stay action-centric; keep environmental detail spare.",
+  "Rewrite the instruction as a text-to-video prompt (<=100 words, ~128 token hard cap) starting with the action verb, unfolding what the the person's hand does to the locked object (object name verbatim) through to completion. Keep background mentions brief.",
+  "Rewrite the instruction as a text-to-video prompt (<=100 words, ~128 token hard cap) decomposing into approach -> contact -> completion sub-actions performed by the the person's hand on the locked object (object name verbatim), ending at the final state. Restrain scene/background detail."
+ ],
+ "wrapper_pre": "The attached image is the first frame of a {kind} manipulation video. ",
+ "wrapper_suf": " If the instruction conflicts with the image, prioritize the image. Output ONLY the rewritten prompt.\n\nInstruction: ",
+ "rewrite_templates_version": "v3 (2026-06-16): action-focused, <=128 token, object-locked, completion-state, minimal scene"
+}

@@ -31,8 +31,9 @@ the next project without reverse-engineering the existing corpus.
 1. **`docs/01-source-contract.md`** — the only thing a new batch must satisfy.
    11 fields, one directory layout. Verified against all 11 existing datasets
    (1,391 episodes), zero exceptions.
-2. **`docs/02-ingestion.md`** — how episodes are selected, with three worked
-   examples, and an explicit list of what is *not* recoverable.
+2. **`docs/02-ingestion.md`** — which corpora, how clips are cut, and how each of
+   the three prompt fields is produced, with three worked
+   examples and an explicit list of what is *not* recoverable.
 3. **`docs/04-acceptance.md`** — the checks a delivered batch must pass.
 
 ## Tools
