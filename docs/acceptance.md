@@ -5,10 +5,11 @@ Run these before delivering a batch. All must pass.
 ## 1. Format
 
 ```bash
-python tools/validate_dataset.py data/<dataset> --strict-media
+python tools/validate_dataset.py data/<dataset> --spec v2 --strict-media
 ```
 
-Must exit `0`.
+Must exit `0`. New batches use `--spec v2`, which additionally enforces the
+clip-duration policy and requires `action_caption` and `speed_factor`.
 
 Include `--strict-media`. It decodes every video with `ffprobe`. A previous batch
 shipped 91 byte-truncated videos (`moov atom not found`) that a file-size

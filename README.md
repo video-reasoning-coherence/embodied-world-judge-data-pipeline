@@ -36,22 +36,23 @@ Validate an existing dataset to confirm your setup:
 
 ```bash
 export EWJ_DATA_ROOT=/path/to/data
-python tools/validate_dataset.py "$EWJ_DATA_ROOT/robotwin"
+python tools/validate_dataset.py "$EWJ_DATA_ROOT/robotwin" --spec v1
 ```
 
 Expected output:
 
 ```text
-dataset=robotwin  episodes=198
+dataset=robotwin  episodes=198  spec=v1
 
-PASS  (0 fail, 0 warn)
+PASS  (0 failed, 0 warnings)
 ```
 
-Build a new dataset by adapting one of the scripts in [`examples/`](examples/),
-then gate it before delivery:
+Build a new dataset by filling in `iter_source_episodes()` in
+[`examples/ingest_template.py`](examples/ingest_template.py), which implements the
+clip rules, then gate it before delivery:
 
 ```bash
-python tools/validate_dataset.py data/my_dataset --strict-media
+python tools/validate_dataset.py data/my_dataset --spec v2 --strict-media
 python tools/check_disjoint.py   data/my_dataset --against data/*/summary.json
 ```
 
@@ -131,6 +132,7 @@ python tools/validate_dataset.py <dataset_dir> [--strict-media]
 
 | Option | Description |
 | --- | --- |
+| `--spec {v1,v2}` | Format version. `v2` (default) is for new batches: it requires `action_caption` and `speed_factor` and enforces the clip-duration policy. `v1` is the original eleven-field format used by the existing corpus. |
 | `--strict-media` | Decode every video with `ffprobe`. Slower, but catches truncated files that a file-size check misses. |
 
 Checks performed: required fields and their types, `(task_name, episode_name)`
@@ -163,6 +165,7 @@ docs/
   generation.md      Pointer to the video generation stage in the main repo
   acceptance.md      Checklist a delivered batch must satisfy
 examples/
+  ingest_template.py         Reference implementation of the clip rules
   ingest_egodex_human.py     Working ingest script (EgoDex, human egocentric)
   ingest_egoscaler.py        Working ingest script (EgoScaler)
   ingest_epickitchens.py     Working ingest script (EPIC-KITCHENS)
@@ -176,8 +179,8 @@ tools/
 
 ## Current corpus
 
-Eleven datasets, 1,391 episodes. All pass `validate_dataset.py` with no
-failures and no warnings.
+Eleven datasets, 1,391 episodes, built under spec v1. All pass
+`validate_dataset.py --spec v1` with no failures and no warnings.
 
 | Dataset | Episodes | Type |
 | --- | ---: | --- |

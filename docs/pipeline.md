@@ -27,18 +27,37 @@ distinction propagates into the refinement rubric and the template family.
 
 ## 2. Clip selection
 
-Reference implementation: [`examples/ingest_egodex_human.py`](../examples/ingest_egodex_human.py),
-source corpus `yixuan-tan/EgoDex-LeRobot-v3.0`.
+Reference implementation: [`examples/ingest_template.py`](../examples/ingest_template.py).
+Supply `iter_source_episodes()` for your corpus; the four clip rules below are
+already implemented. The scripts in `examples/ingest_*.py` are the original
+per-corpus versions and predate these rules.
+
+### Rules
+
+| # | Rule |
+| --- | --- |
+| 1 | One complete action per clip. Preferred length 5–10s, hard minimum 5s, hard maximum 20s. |
+| 2 | A source segment that is too slow may be sped up (1.5× or 2×) to bring it into band. Record the rate in `speed_factor`. |
+| 3 | The conditioning frame must clearly show **both** the manipulator and the object the instruction refers to. |
+| 4 | Every episode carries an `action_caption` describing the complete action through to its completion state. |
+
+Enforced by `tools/validate_dataset.py --spec v2`; rules 1 and 4 fail the batch,
+rule 2 is recorded rather than checked, rule 3 is applied at ingestion time.
+
+### Procedure
 
 1. Enumerate episodes from the source corpus. For LeRobot-format datasets, each
    parquet row carries `from_timestamp` and `to_timestamp` for its segment.
-2. Keep only segments between **5 and 10 seconds**. Shorter clips contain too
-   little action to judge; longer clips exceed what most generators can cover.
+2. Apply the duration rule. Segments shorter than 5s are dropped: they cannot
+   contain a complete action. Segments longer than the band are sped up if an
+   allowed rate brings them into it, and dropped otherwise.
 3. Cut the clip:
 
    ```bash
    ffmpeg -ss <from_timestamp> -i <source> -t <duration> <out>/video.mp4
    ```
+
+   Add `-filter:v setpts=<1/speed>*PTS` when `speed_factor != 1.0`.
 
 4. Extract the conditioning frame at `t = 0` of the cut clip:
 
@@ -56,20 +75,28 @@ source corpus `yixuan-tan/EgoDex-LeRobot-v3.0`.
 The conditioning frame is the input every generator is given, so an unusable
 frame invalidates every video produced from that episode.
 
-For human datasets, a vision-language model is asked a single strict question:
+A vision-language model is asked two questions about the frame:
 
-> Is at least one human hand clearly visible in this image (egocentric
-> first-person view)? Requires recognizable fingers or palm; a wrist or sleeve
-> alone does not count.
+1. **manipulator_visible** — is the gripper or hand clearly visible? Requires
+   recognizable structure, not just an edge or a sleeve.
+2. **object_visible** — is the object the instruction refers to clearly visible?
 
-If the answer is negative, the pipeline retries at `t = 0.3, 0.7, 1.2, 1.8`
-seconds and uses the first frame that passes. If no frame passes, the episode is
-dropped.
+Both must be true. If either fails, the pipeline retries at
+`t = 0.3, 0.7, 1.2, 1.8` seconds and uses the first frame that passes; if none
+passes, the episode is dropped.
 
 Report how many episodes each filter removed, and the denominator it removed them
 from.
 
 ## 4. Prompt construction
+
+### 4.0 `action_caption` — the complete action
+
+One or two sentences, third person present tense, describing the action from
+start through to its completion state. This is a description, unlike `prompt`,
+which is a command. Both are kept because they answer different questions: the
+command is what the generator is asked to do, the caption is what a correct
+result looks like.
 
 ### 4.1 `prompt` — the grounded instruction
 
