@@ -1,65 +1,210 @@
-# Embodied World Judge — data pipeline
+# Embodied World Judge — Data Pipeline
 
-How the **source data** for `MLLM-as-Embodied-World-Judge` is constructed, and
-what a new batch has to satisfy to be usable.
+Tooling and specification for building **source datasets** for
+[MLLM-as-Embodied-World-Judge](https://github.com/SiyuanMaCS/MLLM-as-Embodied-World-Judge):
+manipulation video clips paired with grounded instructions, used to evaluate how
+well video generators respect physics and follow instructions.
 
-This repository exists so an external agent can build **more** source data for
-the next project without reverse-engineering the existing corpus.
+Use this repository to build a **new batch** of source data that is compatible
+with the existing corpus.
 
-## The three stages
+---
 
-```text
-  public corpus  ──①ingest──▶  data/<dataset>/{summary.json, gt_data/}
-                                        │
-                                        ②generate
-                                        ▼
-                              data/<dataset>/generated_data/<model>/...
-                                        │
-                                        ③judge / annotate
-                                        ▼
-                                   train / test splits
-```
+## Contents
 
-| stage | where it is documented |
-|---|---|
-| ① ingest | `docs/02-ingestion.md` + `examples/` (3 working scripts) |
-| ② generate | **already documented** — `README_VIDEO_GENERATION.md` in the main repo; see `docs/03-generation.md` |
-| ③ judge / annotate | out of scope here — see `EXTERNAL_AGENT_REQUIREMENTS.md` in the annotation repo |
+- [Quick start](#quick-start)
+- [How it works](#how-it-works)
+- [Data format](#data-format)
+- [Command reference](#command-reference)
+- [Repository layout](#repository-layout)
+- [Current corpus](#current-corpus)
+- [Limitations](#limitations)
 
-## Start here
+---
 
-1. **`docs/01-source-contract.md`** — the only thing a new batch must satisfy.
-   11 fields, one directory layout. Verified against all 11 existing datasets
-   (1,391 episodes), zero exceptions.
-2. **`docs/02-ingestion.md`** — which corpora, how clips are cut, and how each of
-   the three prompt fields is produced, with three worked
-   examples and an explicit list of what is *not* recoverable.
-3. **`docs/04-acceptance.md`** — the checks a delivered batch must pass.
+## Quick start
 
-## Tools
+**Requirements:** Python 3.9+, `ffmpeg` and `ffprobe` on `PATH`.
 
 ```bash
-python tools/validate_dataset.py data/<dataset> [--strict-media]
-python tools/check_disjoint.py   data/<dataset> --against <summary.json|split.jsonl> ...
+git clone https://github.com/SiyuanMaCS/embodied-world-judge-data-pipeline.git
+cd embodied-world-judge-data-pipeline
+pip install -r requirements.txt
 ```
 
-Both exit non-zero on failure, so they can gate a delivery. They are the
-executable form of the contract — if the prose and the validator ever disagree,
-**the validator wins.**
+Validate an existing dataset to confirm your setup:
 
-Current state of the existing corpus:
+```bash
+export EWJ_DATA_ROOT=/path/to/data
+python tools/validate_dataset.py "$EWJ_DATA_ROOT/robotwin"
+```
+
+Expected output:
 
 ```text
-agibot_world 200 · droid 199 · robotwin 198 · gr1_inlab 171 · egodex_human 150
-open_x_embodiment 142 · libero 100 · egoscaler_human 100 · epickitchens_human 60
-dreamdojo_hv 47 · egodex 24                                    total 1,391
-all 11 pass validate_dataset.py with 0 fail / 0 warn
+dataset=robotwin  episodes=198
+
+PASS  (0 fail, 0 warn)
 ```
 
-## Known gaps
+Build a new dataset by adapting one of the scripts in [`examples/`](examples/),
+then gate it before delivery:
 
-- **8 of the 11 datasets have no recoverable ingest script.** Their selection
-  logic is not documented and should not be assumed reproducible. Treat a new
-  batch as a fresh ingestion against the contract.
-- The example scripts hard-code their output root and their API keys come from
-  the environment; read the header before running one.
+```bash
+python tools/validate_dataset.py data/my_dataset --strict-media
+python tools/check_disjoint.py   data/my_dataset --against data/*/summary.json
+```
+
+Both exit non-zero on failure, so they can be used directly in CI.
+
+---
+
+## How it works
+
+```text
+  public corpus
+       │
+       │  1. select episodes, cut 5–10s clips, extract the conditioning frame
+       ▼
+  data/<dataset>/gt_data/          ──▶  2. write summary.json (11 fields)
+       │
+       │  3. generate videos with each model under test
+       ▼
+  data/<dataset>/generated_data/   ──▶  4. judge / annotate  →  train & test splits
+```
+
+Stages 1–2 are covered by this repository. Stage 3 is documented in
+[`README_VIDEO_GENERATION.md`](https://github.com/SiyuanMaCS/MLLM-as-Embodied-World-Judge/blob/main/README_VIDEO_GENERATION.md)
+in the main repository; stage 4 is out of scope here.
+
+See [`docs/pipeline.md`](docs/pipeline.md) for the full specification of stages
+1–2, including clip selection, the conditioning-frame filter, and how each
+prompt field is produced.
+
+---
+
+## Data format
+
+Every dataset is a directory:
+
+```text
+data/<dataset>/
+├── summary.json
+└── gt_data/
+    └── <task_name>/<episode_name>/
+        ├── prompt/
+        │   ├── init_frame.png
+        │   └── prompt.txt
+        └── video.mp4
+```
+
+`summary.json` is a JSON array. Every record has all eleven fields:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `gt_path` | string | Repo-relative path to `video.mp4` |
+| `image` | string | Repo-relative path to `init_frame.png` |
+| `task_name` | string | Unique within the dataset |
+| `episode_name` | string | Unique within the task |
+| `prompt` | array of string | The grounded instruction |
+| `prompt_prefix` | string | Scene-stability preamble applied at generation time |
+| `prompt_rewrite` | string | Image-grounded rephrasing of the instruction |
+| `prefix_id` | string \| int | Which prefix variant was used |
+| `rewrite_id` | string \| int | Which rewrite variant was used |
+| `duration` | number | Clip length in seconds |
+| `init_frame_offset_sec` | number | Timestamp `init_frame.png` was taken from |
+
+Full specification, including the `item_id` convention used downstream:
+[`docs/data-format.md`](docs/data-format.md).
+
+---
+
+## Command reference
+
+### `validate_dataset.py`
+
+Validates a dataset against the format specification.
+
+```bash
+python tools/validate_dataset.py <dataset_dir> [--strict-media]
+```
+
+| Option | Description |
+| --- | --- |
+| `--strict-media` | Decode every video with `ffprobe`. Slower, but catches truncated files that a file-size check misses. |
+
+Checks performed: required fields and their types, `(task_name, episode_name)`
+uniqueness, existence of `video.mp4`, `prompt/init_frame.png` and
+`prompt/prompt.txt`, and agreement between `gt_path` and the directory layout.
+
+**Exit codes:** `0` valid, `1` invalid.
+
+### `check_disjoint.py`
+
+Checks that a new dataset does not overlap released data.
+
+```bash
+python tools/check_disjoint.py <dataset_dir> --against <summary.json|split.jsonl> ...
+```
+
+Compares on `(dataset, task_name, episode_name)` and on `gt_path`. Accepts both
+`summary.json` files and released `.jsonl` splits.
+
+**Exit codes:** `0` disjoint, `1` overlapping.
+
+---
+
+## Repository layout
+
+```text
+docs/
+  pipeline.md        How source data is built: corpora, clips, prompts
+  data-format.md     summary.json specification and directory layout
+  generation.md      Pointer to the video generation stage in the main repo
+  acceptance.md      Checklist a delivered batch must satisfy
+examples/
+  ingest_egodex_human.py     Working ingest script (EgoDex, human egocentric)
+  ingest_egoscaler.py        Working ingest script (EgoScaler)
+  ingest_epickitchens.py     Working ingest script (EPIC-KITCHENS)
+  prompt_templates.json      Prefix and rewrite templates (v3)
+tools/
+  validate_dataset.py
+  check_disjoint.py
+```
+
+---
+
+## Current corpus
+
+Eleven datasets, 1,391 episodes. All pass `validate_dataset.py` with no
+failures and no warnings.
+
+| Dataset | Episodes | Type |
+| --- | ---: | --- |
+| `agibot_world` | 200 | Robot |
+| `droid` | 199 | Robot |
+| `robotwin` | 198 | Robot (simulated) |
+| `gr1_inlab` | 171 | Robot |
+| `egodex_human` | 150 | Human egocentric |
+| `open_x_embodiment` | 142 | Robot |
+| `libero` | 100 | Robot (simulated) |
+| `egoscaler_human` | 100 | Human egocentric |
+| `epickitchens_human` | 60 | Human egocentric |
+| `dreamdojo_hv` | 47 | Robot |
+| `egodex` | 24 | Human egocentric |
+| **Total** | **1,391** | |
+
+---
+
+## Limitations
+
+- **Episode-selection code exists for 3 of the 11 datasets.** The scripts in
+  `examples/` cover `egodex_human`, `egoscaler_human` and `epickitchens_human`.
+  For the remaining eight, the prompt pipeline is shared and documented, but the
+  logic that chose *which* episodes to include was not preserved. Treat a new
+  batch as a fresh ingestion against the specification rather than a
+  reproduction.
+- Example scripts require a Gemini API key in `GEMINI_API_KEY` and read their
+  output root from `EWJ_DATA_ROOT`.
+- Source video licences follow the upstream corpora and are not redistributed by
+  this repository.
