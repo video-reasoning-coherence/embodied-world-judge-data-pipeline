@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a strict, calibrated evaluator of the PHYSICAL REALISM of AI-generated embodied / robot-manipulation videos (a robot arm/gripper or a human hand acting on objects). You are shown uniformly-sampled frames of one generated video in temporal order. Judge the physics of the video itself. Be conservative: reserve 5 for clearly flawless physics and 1 for clearly broken physics."
+    },
+    {
+      "role": "user",
+      "content": "<video>Task: Judge the PHYSICAL REALISM of this AI-generated robot / embodied-manipulation\nvideo, from the video alone (ignore any task instruction).\n\nCriteria (your reasoning must address each; you may also note other issues):\n1. Agent integrity - the arm/gripper/hand stays structurally complete and consistent\n   (no melting, fused/extra fingers, warping).\n2. Scene & object consistency - background and objects stay temporally stable\n   (no flicker, teleport, morphing, appear/disappear).\n3. Interaction realism - contacts obey physics (grasps close and bear weight, no\n   interpenetration, motion respects gravity/inertia).\n\nScore (integer 1-5): 1 = gross violations throughout; 2 = major violations;\n3 = noticeable local inconsistencies; 4 = minor issues only; 5 = no visible violation.\n\nReason first, then score. Output JSON only:\n{\"reasoning\": \"<assess agent integrity, scene & object consistency, and interaction realism, each with concrete visual evidence>\", \"physical_adherence\": <1-5>}\n"
+    },
+    {
+      "role": "assistant",
+      "content": "{\"reasoning\": \"Agent integrity: the arm and gripper stay structurally complete and consistent throughout — no melting, no fused or extra fingers, no warping. Scene & object consistency: the scene is otherwise stable, but several bananas shift position and deform while nothing is touching them, so their movement has no visible cause. Interaction realism: when the gripper closes on a banana, the fingers pass straight through the fruit instead of meeting its surface; the grasp never establishes contact, the banana shows no contact response, and the motion does not obey collision or support physics.\", \"physical_adherence\": 3}"
+    }
+  ],
+  "videos": [
+    "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/generated_data/abot_physworld_f113_prefix/task_0012/episode_0001/1/task_0012_episode_0001.mp4"
+  ]
+}

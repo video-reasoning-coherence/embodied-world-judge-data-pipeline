@@ -20,7 +20,8 @@ translating and you are not summarising; you are writing the justification the n
 | `README.md` | this document |
 | `units.jsonl` | **10,976 units** that have a note — the main job |
 | `units_no_note.jsonl` | **472 units** with no note — reasoning must be written from the video, see [Second package](#second-package) |
-| `example_unit.json` | one input unit and an acceptable output for it |
+| `example_unit.json` | two worked units — one `pa`, one `ia` — with acceptable output |
+| `final_row_example.json` | the complete SFT row your text ends up in |
 | `check_rewrite.py` | the delivery gate. Your output must pass it |
 
 A **unit** is one (video, axis) pair, so a single video can appear twice — once as `pa`, once as
@@ -162,6 +163,28 @@ Three consequences, and they are the reason for the rules further down:
 3. **The axis names in the criteria are the anchors.** Use them verbatim; they are what makes the
    output checkable.
 
+### What the finished row looks like
+
+Your reasoning is dropped into the assistant turn and nothing else changes.
+[`final_row_example.json`](final_row_example.json) is the complete training row built from the `pa`
+worked example:
+
+```json
+{
+  "messages": [
+    {"role": "system",    "content": "You are a strict, calibrated evaluator of the PHYSICAL REALISM ..."},
+    {"role": "user",      "content": "<video>Task: Judge the PHYSICAL REALISM of this AI-generated ..."},
+    {"role": "assistant", "content": "{\"reasoning\": \"Agent integrity: the arm and gripper stay ...\", \"physical_adherence\": 3}"}
+  ],
+  "videos": ["https://huggingface.co/datasets/.../task_0012_episode_0001.mp4"]
+}
+```
+
+The assistant turn is a **JSON string with exactly two keys**. You supply `reasoning`; the score field
+is filled from our data. That is the whole reason your text must not contain the score — it is already
+in the row, once.
+
+
 ## Target form
 
 Complete, fluent prose naming each axis in order, one to three sentences per axis, no bullet points,
@@ -176,16 +199,14 @@ training set. This is a real example from that set:
 > realism: the gripper approaches and lifts a slice in a broadly plausible way, though the grasp
 > looks loose and the slice shifts without clear finger closure.
 
-**Length.** Match the reasoning already in the training set, which is the reference for both style
-and length:
+**Length: write what the note supports and stop.** One clause per fact, no meta-commentary
+("this is where it breaks down"), no closing summary, no restating the score. The worked examples in
+`example_unit.json` run 587 characters (`pa`) and 495 (`ia`).
 
-| axis | words | characters (p10 – median – p90) |
-| --- | ---: | --- |
-| `pa` | ~150 | 878 – **1,044** – 1,238 |
-| `ia` | ~110 | 531 – **669** – 858 |
-
-`pa` runs longer than `ia`; that is not an accident, so do not level them. `example_unit.json`
-contains one worked `pa` unit and one worked `ia` unit, both written at reference length.
+For reference, the reasoning already in the training set is longer — `pa` median 1,044 characters,
+`ia` 669. **Do not pad to match it.** Those rows were written from the video, which supports more
+observations; yours are written from a short note, which bounds what can honestly be said. Reaching
+1,044 characters from a two-line note would require exactly the invention rule 1 forbids.
 
 **Axis names, exactly these strings, in this order:**
 

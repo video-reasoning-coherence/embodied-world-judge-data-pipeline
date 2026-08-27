@@ -17,12 +17,11 @@ CJK = re.compile(r"[一-鿿]")
 VERDICT = re.compile(r"\((?:PA|IA)[1-5]\)")
 FRAME = re.compile(r"\bf\d{2}\b")
 SCAFFOLD = re.compile(r"[✓⚠]|代\s")
-# Floors, not targets. The reasoning already in the training set has a p10 of 878 chars for pa
-# and 531 for ia; these sit well below that so that genuinely terse-but-complete answers pass,
-# while a one-line stub cannot.
-MIN_CHARS = {"pa": 400, "ia": 300}
-# The reference medians, printed for comparison so length drift is visible without reading.
-REFERENCE_MEDIAN = {"pa": 1044, "ia": 669}
+# Floors, not targets. A concise answer that addresses three criteria lands around 500-600 chars
+# (see example_unit.json); these floors sit below that so terse-but-complete passes and a stub does
+# not. Deliberately NOT set near the existing reasoning's median -- those rows were written from the
+# video and are longer; padding a note-derived answer up to them would mean inventing.
+MIN_CHARS = {"pa": 350, "ia": 280}
 
 
 def load(path):
@@ -87,9 +86,9 @@ def main():
                           for uid, r in seen.items()
                           if uid in units and units[uid]["axis"] == axis)
             if lens:
-                print("chars %-3s : median %d  p10 %d  p90 %d   (reference median %d)"
+                print("chars %-3s : median %d  p10 %d  p90 %d"
                       % (axis, lens[len(lens) // 2], lens[len(lens) // 10],
-                         lens[len(lens) * 9 // 10], REFERENCE_MEDIAN[axis]))
+                         lens[len(lens) * 9 // 10]))
         # A templated delivery repeats whole sentences. Not a failure, but worth seeing.
         sents = {}
         for row in seen.values():
