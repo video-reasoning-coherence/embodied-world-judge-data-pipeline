@@ -87,6 +87,81 @@ are not being asked to judge whether it is correct.
 | `video_url`, `init_frame_url`, `instruction_url` | the media. All three resolve without auth |
 | `dataset`, `model`, `task`, `episode` | provenance of the clip |
 
+## The prompt your text will be trained under
+
+This matters more than anything else in this document. Each unit becomes one supervised
+fine-tuning example. The reasoning you write **is the assistant turn** — it is the answer to the
+prompt below, verbatim, with no post-processing. Write it so that it reads as a direct answer to
+this specific prompt.
+
+**For `axis: "pa"` — system message:**
+
+> You are a strict, calibrated evaluator of the PHYSICAL REALISM of AI-generated embodied /
+> robot-manipulation videos (a robot arm/gripper or a human hand acting on objects). You are shown
+> uniformly-sampled frames of one generated video in temporal order. Judge the physics of the video
+> itself. Be conservative: reserve 5 for clearly flawless physics and 1 for clearly broken physics.
+
+**and user message:**
+
+```text
+<video>Task: Judge the PHYSICAL REALISM of this AI-generated robot / embodied-manipulation
+video, from the video alone (ignore any task instruction).
+
+Criteria (your reasoning must address each; you may also note other issues):
+1. Agent integrity - the arm/gripper/hand stays structurally complete and consistent
+   (no melting, fused/extra fingers, warping).
+2. Scene & object consistency - background and objects stay temporally stable
+   (no flicker, teleport, morphing, appear/disappear).
+3. Interaction realism - contacts obey physics (grasps close and bear weight, no
+   interpenetration, motion respects gravity/inertia).
+
+Score (integer 1-5): 1 = gross violations throughout; 2 = major violations;
+3 = noticeable local inconsistencies; 4 = minor issues only; 5 = no visible violation.
+
+Reason first, then score. Output JSON only:
+{"reasoning": "<assess agent integrity, scene & object consistency, and interaction realism, each with concrete visual evidence>", "physical_adherence": <1-5>}
+```
+
+**For `axis: "ia"` — system message:**
+
+> You are a strict, calibrated evaluator of whether an AI-generated embodied-manipulation video
+> correctly performs a given task instruction. You are shown the instruction and uniformly-sampled
+> frames of one generated video in temporal order; the FIRST frame is the initial scene the video
+> was conditioned on. Judge task execution, not raw visual quality. Be conservative: reserve 5 for
+> full, correct task completion and 1 for unrelated videos.
+
+**and user message** (`{instruction}` is the text at `instruction_url`):
+
+```text
+<image><video>Task: Judge whether this AI-generated video performs the instructed manipulation
+task. The first frame is the initial scene the video was conditioned on.
+
+Instruction: "{instruction}"
+
+Criteria (your reasoning must address each; you may also note other issues):
+1. Agent match - the task is done by the SAME manipulator shown in the first frame
+   (not a different/new agent).
+2. Object correctness - the manipulated object is the instruction's target object.
+3. Goal completion - the instructed goal is actually achieved by the end
+   (not merely approached).
+
+Score (integer 1-5): 1 = unrelated or task not performed; 2 = major misalignment;
+3 = partial completion; 4 = minor shortfalls only; 5 = full, correct completion.
+
+Reason first, then score. Output JSON only:
+{"reasoning": "<assess agent match, object correctness, and goal completion, each with concrete evidence>", "instruction_alignment": <1-5>}
+```
+
+Three consequences, and they are the reason for the rules further down:
+
+1. **"your reasoning must address each"** — the prompt demands all three criteria. That is why an
+   axis the note is silent about still has to be written (rule 2), rather than omitted.
+2. **The score is emitted separately**, in its own JSON field. Your text must therefore never
+   restate it, and must never carry a `(PA3)`-style verdict — that would put the same answer in the
+   row twice, and the two copies can disagree.
+3. **The axis names in the criteria are the anchors.** Use them verbatim; they are what makes the
+   output checkable.
+
 ## Target form
 
 Complete, fluent prose naming each axis in order, one to three sentences per axis, no bullet points,
@@ -100,6 +175,17 @@ training set. This is a real example from that set:
 > inconsistent — there appear to be multiple slices early, yet a single slice later. Interaction
 > realism: the gripper approaches and lifts a slice in a broadly plausible way, though the grasp
 > looks loose and the slice shifts without clear finger closure.
+
+**Length.** Match the reasoning already in the training set, which is the reference for both style
+and length:
+
+| axis | words | characters (p10 – median – p90) |
+| --- | ---: | --- |
+| `pa` | ~150 | 878 – **1,044** – 1,238 |
+| `ia` | ~110 | 531 – **669** – 858 |
+
+`pa` runs longer than `ia`; that is not an accident, so do not level them. `example_unit.json`
+contains one worked `pa` unit and one worked `ia` unit, both written at reference length.
 
 **Axis names, exactly these strings, in this order:**
 

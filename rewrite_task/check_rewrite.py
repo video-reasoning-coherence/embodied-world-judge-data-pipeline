@@ -17,7 +17,12 @@ CJK = re.compile(r"[一-鿿]")
 VERDICT = re.compile(r"\((?:PA|IA)[1-5]\)")
 FRAME = re.compile(r"\bf\d{2}\b")
 SCAFFOLD = re.compile(r"[✓⚠]|代\s")
-MIN_CHARS = 150
+# Floors, not targets. The reasoning already in the training set has a p10 of 878 chars for pa
+# and 531 for ia; these sit well below that so that genuinely terse-but-complete answers pass,
+# while a one-line stub cannot.
+MIN_CHARS = {"pa": 400, "ia": 300}
+# The reference medians, printed for comparison so length drift is visible without reading.
+REFERENCE_MEDIAN = {"pa": 1044, "ia": 669}
 
 
 def load(path):
@@ -55,16 +60,17 @@ def main():
         if not text.strip():
             fails.append("%s: empty reasoning" % uid)
             continue
-        if len(text) < MIN_CHARS:
-            fails.append("%s: reasoning is %d chars, below the %d floor -- three axes cannot be "
-                         "covered in that space" % (uid, len(text), MIN_CHARS))
+        axis = units[uid]["axis"]
+        if len(text) < MIN_CHARS[axis]:
+            fails.append("%s: reasoning is %d chars, below the %d floor for %s -- three criteria "
+                         "cannot be addressed in that space" % (uid, len(text), MIN_CHARS[axis], axis))
         if CJK.search(text):
             fails.append("%s: Chinese characters remain" % uid)
         if VERDICT.search(text):
             fails.append("%s: contains a (PAn)/(IAn) verdict" % uid)
         if FRAME.search(text) or SCAFFOLD.search(text):
             fails.append("%s: annotator scaffolding not removed" % uid)
-        for name in AXIS_NAMES[units[uid]["axis"]]:
+        for name in AXIS_NAMES[axis]:
             if name not in text:
                 fails.append("%s: axis '%s' not covered" % (uid, name))
 
@@ -76,10 +82,14 @@ def main():
     print("units in  : %d" % len(units))
     print("units out : %d" % len(seen))
     if seen:
-        lengths = sorted(len(r.get("reasoning") or "") for r in seen.values())
-        print("chars     : median %d  p10 %d  p90 %d"
-              % (lengths[len(lengths) // 2], lengths[len(lengths) // 10],
-                 lengths[len(lengths) * 9 // 10]))
+        for axis in ("pa", "ia"):
+            lens = sorted(len(r.get("reasoning") or "")
+                          for uid, r in seen.items()
+                          if uid in units and units[uid]["axis"] == axis)
+            if lens:
+                print("chars %-3s : median %d  p10 %d  p90 %d   (reference median %d)"
+                      % (axis, lens[len(lens) // 2], lens[len(lens) // 10],
+                         lens[len(lens) * 9 // 10], REFERENCE_MEDIAN[axis]))
         # A templated delivery repeats whole sentences. Not a failure, but worth seeing.
         sents = {}
         for row in seen.values():
