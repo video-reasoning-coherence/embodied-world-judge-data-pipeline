@@ -17,6 +17,7 @@ CJK = re.compile(r"[一-鿿]")
 VERDICT = re.compile(r"\((?:PA|IA)[1-5]\)")
 FRAME = re.compile(r"\bf\d{2}\b")
 SCAFFOLD = re.compile(r"[✓⚠]|代\s")
+MIN_CHARS = 150
 
 
 def load(path):
@@ -54,6 +55,9 @@ def main():
         if not text.strip():
             fails.append("%s: empty reasoning" % uid)
             continue
+        if len(text) < MIN_CHARS:
+            fails.append("%s: reasoning is %d chars, below the %d floor -- three axes cannot be "
+                         "covered in that space" % (uid, len(text), MIN_CHARS))
         if CJK.search(text):
             fails.append("%s: Chinese characters remain" % uid)
         if VERDICT.search(text):
@@ -71,6 +75,24 @@ def main():
 
     print("units in  : %d" % len(units))
     print("units out : %d" % len(seen))
+    if seen:
+        lengths = sorted(len(r.get("reasoning") or "") for r in seen.values())
+        print("chars     : median %d  p10 %d  p90 %d"
+              % (lengths[len(lengths) // 2], lengths[len(lengths) // 10],
+                 lengths[len(lengths) * 9 // 10]))
+        # A templated delivery repeats whole sentences. Not a failure, but worth seeing.
+        sents = {}
+        for row in seen.values():
+            for part in re.split(r"(?<=[.!?])\s+", row.get("reasoning") or ""):
+                part = part.strip()
+                if len(part) > 40:
+                    sents[part] = sents.get(part, 0) + 1
+        if sents:
+            top, n = max(sents.items(), key=lambda kv: kv[1])
+            share = 100.0 * n / len(seen)
+            print("repeats   : most common sentence appears in %d units (%.1f%%)" % (n, share))
+            if share >= 5.0:
+                print("            -> %s" % top[:110])
     for message in fails[:25]:
         print("FAIL  " + message)
     if len(fails) > 25:

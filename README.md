@@ -8,6 +8,16 @@ well video generators respect physics and follow instructions.
 Use this repository to build a **new batch** of source data that is compatible
 with the existing corpus.
 
+> ### Two separate jobs live here
+>
+> **Building new source data** — the rest of this README, plus `docs/`, `tools/` and
+> `examples/`. Start at [Quick start](#quick-start).
+>
+> **Rewriting annotator notes into training reasoning** — a self-contained text task
+> with its own data and its own acceptance gate. It shares nothing with the pipeline
+> above except this repository. Start at
+> [`rewrite_task/README.md`](rewrite_task/README.md).
+
 ---
 
 ## Contents
@@ -27,7 +37,7 @@ with the existing corpus.
 **Requirements:** Python 3.9+, `ffmpeg` and `ffprobe` on `PATH`.
 
 ```bash
-git clone https://github.com/SiyuanMaCS/embodied-world-judge-data-pipeline.git
+git clone https://github.com/video-reasoning-coherence/embodied-world-judge-data-pipeline.git
 cd embodied-world-judge-data-pipeline
 pip install -r requirements.txt
 ```
