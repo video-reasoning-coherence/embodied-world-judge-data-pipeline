@@ -19,7 +19,7 @@ translating and you are not summarising; you are writing the justification the n
 | --- | --- |
 | `README.md` | this document |
 | `units.jsonl` | **10,976 units** that have a note — the main job |
-| `units_no_note.jsonl` | **472 units** with no note at all — see [Second package](#second-package) |
+| `units_no_note.jsonl` | **472 units** with no note — reasoning must be written from the video, see [Second package](#second-package) |
 | `example_unit.json` | one input unit and an acceptable output for it |
 | `check_rewrite.py` | the delivery gate. Your output must pass it |
 
@@ -192,19 +192,31 @@ the video and it seems to disagree, **follow the note**.
 
 ## <a name="second-package"></a>Second package: `units_no_note.jsonl` (472 units)
 
-These have a score and sub-scores but **no note at all** — 437 `ia` and 35 `pa`. There is no text to
-rewrite, so the reasoning has to be written from the sub-scores plus **watching the video**. Fields
-are identical except that `note` is absent.
+**These need reasoning written for them too.** They carry a score and sub-scores but no note — 437
+`ia` and 35 `pa`. Fields are identical to `units.jsonl` except that `note` is absent. Deliver them
+in the same `rewritten.jsonl` format, as `rewritten_no_note.jsonl`.
 
-**Do this package only if you can actually watch the videos.** If you cannot, deliver
-`units.jsonl` and say so; do not fill these in from the sub-scores alone, because rule 1 would have
-nothing to stand on and the result would be 472 rows of fluent invention. Returning them untouched
-is the correct outcome in that case.
+The target form, the axis names and rules 3–5 are unchanged. What changes is **where the
+observations come from**: with no note, the source is the video itself.
+
+1. **Watch the clip** at `video_url`, and for an `ia` unit read `instruction_url` and look at
+   `init_frame_url` — the instruction is what the video is being judged against.
+2. **Write what you actually see**, per axis, in the target form. Rule 1 still holds and is now
+   about the video: describe what is in the clip, not what the score implies must be there.
+3. **The scores are fixed.** `main_score` and `sub_scores` are given and are not yours to change.
+   Where an axis's sub-score records a problem, look for that problem in the video and describe it.
+   If after watching you genuinely cannot see what the sub-score refers to, write that axis in the
+   rubric's general language rather than inventing a specific failure — same as rule 2.
+
+**If you cannot process video at all, say so before you start** rather than filling these from the
+sub-scores alone — that would produce 472 rows of fluent invention, which is worse for us than 472
+rows we know are still outstanding.
 
 ## Delivery
 
 ```bash
-python check_rewrite.py units.jsonl rewritten.jsonl     # exit 0 = accepted
+python check_rewrite.py units.jsonl          rewritten.jsonl           # exit 0 = accepted
+python check_rewrite.py units_no_note.jsonl  rewritten_no_note.jsonl   # same gate, second package
 ```
 
 The gate enforces:
@@ -226,7 +238,8 @@ In the same message as the delivery:
 1. how many units you rewrote, and how many you skipped, with the reason
 2. **any unit where the note and its `sub_scores` contradict each other** — e.g. the note says
    严重违反 but the sub-score is `2`. Do not silently pick one; list them and say which you followed
-3. whether you did `units_no_note.jsonl`, and if so how you sourced the observations
+3. for `units_no_note.jsonl`: confirm you watched the clips, and list any unit where you could not
+   see what a sub-score refers to
 4. anything the rules did not cover that you had to decide for yourself
 
 Item 4 matters more than it sounds. If you had to invent a convention, we need to know, because
