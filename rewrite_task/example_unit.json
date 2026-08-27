@@ -1,0 +1,22 @@
+{
+  "unit_id": "data__agibot_world__generated_data__abot_physworld_f113_prefix__task_0002__episode_0001__1__task_0002_episode_0001|pa",
+  "item_id": "data__agibot_world__generated_data__abot_physworld_f113_prefix__task_0002__episode_0001__1__task_0002_episode_0001",
+  "axis": "pa",
+  "dataset": "agibot_world",
+  "model": "abot_physworld_f113_prefix",
+  "task": "task_0002",
+  "episode": "episode_0001",
+  "video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/generated_data/abot_physworld_f113_prefix/task_0002/episode_0001/1/task_0002_episode_0001.mp4",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/generated_data/abot_physworld_f113_prefix/task_0002/episode_0001/1/prompt/init_frame.png",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0002/episode_0001/prompt/prompt.txt",
+  "main_score": 3,
+  "sub_scores": {
+    "agent_consistency": 2,
+    "scene_consistency": 0,
+    "interaction_realism": 1
+  },
+  "note_zh": "背景物体一致性 存在问题：机器人底座右侧白色显示单元存在闪烁、变形、时隐时现问题，操作的透明气泡袋出现重复\n交互真实性 存在问题：机械手放置透明气泡袋时存在轻微滑动的不自然情况",
+  "note_language": "zh",
+  "note_source": "human_annotator",
+  "agent_assisted": false
+}
