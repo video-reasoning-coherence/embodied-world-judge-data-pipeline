@@ -28,6 +28,21 @@ jq -c 'select(.batch=="original_reasoning")' units_22568.jsonl | wc -l   # 11592
 is identical for both, and the whole point is that the two halves stop being distinguishable. Deliver
 one `reformatted.jsonl` covering all 22,568.
 
+> ### The target is not "make one batch look like the other"
+>
+> **Neither batch already meets it.** `rewritten_v3` has the right layout but is roughly twice the
+> length it should be; `original_reasoning` is wrong on both counts.
+>
+> | | layout | length (pa / ia median) | already in the 250–400 band |
+> | --- | --- | --- | ---: |
+> | `rewritten_v3` | three lines ✅ | 748 / 649 ❌ | 825 of 10,976 — 7.5% |
+> | `original_reasoning` | 1 / 3 / 4 lines, 3,909 numbered ❌ | 1,035 / 669 ❌ | 2 of 11,592 — 0.0% |
+> | **target** | **three lines** | **250–400** | — |
+>
+> So `rewritten_v3` keeps its layout and gets compressed; `original_reasoning` gets both. Converting
+> the second batch into the first batch's current form would leave the length untouched — and the
+> length is the defect this task exists to remove.
+
 ## Why this is worth doing
 
 **1. Three layouts are mixed together.**
