@@ -101,9 +101,12 @@ def main():
         if len(lines) != 3:
             fails.append("%s: has %d non-empty lines, expected exactly 3 -- one line per axis"
                          % (uid, len(lines)))
+        # Each line must OPEN with its axis name. A short verdict phrase may sit between the
+        # name and the colon ("Interaction realism severely violated:"), which is what the
+        # reference format does; what is not allowed is a line that does not start with the name.
         for i, name in enumerate(AXIS_NAMES[axis]):
-            if i < len(lines) and not lines[i].startswith(name + ":"):
-                fails.append("%s: line %d should start with '%s:' but starts %r"
+            if i < len(lines) and not lines[i].startswith(name):
+                fails.append("%s: line %d should open with '%s' but starts %r"
                              % (uid, i + 1, name, lines[i][:40]))
         if re.search(r"description\s*:", text, re.I):
             fails.append("%s: contains a 'description:' header -- start directly with the first axis"
