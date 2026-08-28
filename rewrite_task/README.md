@@ -330,7 +330,7 @@ python check_rewrite.py units.jsonl         delivery/rewritten.jsonl          # 
 python check_rewrite.py units_no_note.jsonl delivery/rewritten_no_note.jsonl  # second package
 ```
 
-Deliver by pushing a branch and opening a pull request against `main` — never push to `main`
+Deliver by pushing a branch and opening a pull request against `master` — never push to `master`
 directly. Paste the gate output for both files into the pull request description; see
 [`delivery/README.md`](delivery/README.md) for the exact commands.
 

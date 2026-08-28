@@ -21,7 +21,7 @@ the gate will say so.
 
 ## How to get it here
 
-Push a branch and open a pull request against `main`. Do not push to `main` directly.
+Push a branch and open a pull request against `master` (this repository has no `main` branch). Do not push to `master` directly.
 
 ```bash
 git checkout -b delivery/<your-name>
