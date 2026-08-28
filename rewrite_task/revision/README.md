@@ -13,7 +13,7 @@ You are removing scaffolding, not gathering new observations.
 
 ## What has to change
 
-### 1. No numbers in the prose — 6,211 units
+### 1. No numbers in the prose — 6,353 units
 
 The score is already in the row, in its own JSON field. Writing it again puts two answers in one
 row, and when they disagree the target teaches the model to contradict itself. Remove all of these:
@@ -25,8 +25,12 @@ row, and when they disagree the target teaches the model to contradict itself. R
 | `..., so the goal completion score is 0.` | delete the clause |
 | `These issues justify low sub-scores across ...` | rewrite without the word `sub-score` |
 | `(IA2)` | delete |
+| `This video earns an overall IA score of 2, with sub-scores of 0 for agent match, ...` | delete the whole sentence |
+| `..., so the overall goal is not completed (goal_completed=1).` | `..., so the overall goal is not completed.` |
+| `..., supporting the main score of 4.` | delete the clause |
 
-The word **`sub-score` must not appear at all**. Sub-scores are not part of this target and never
+Neither `main score`, nor `overall PA/IA score`, nor a field name with a number attached
+(`goal_completed=1`) may appear either. The word **`sub-score` must not appear at all**. Sub-scores are not part of this target and never
 have been — they are inputs you use to decide *what* to say about a silent axis, not something to
 report.
 
@@ -80,6 +84,26 @@ form. Run it and fix everything it reports:
 ```bash
 python check_rewrite.py units.jsonl delivery/rewritten.jsonl
 ```
+
+## Please regenerate rather than patch
+
+We tried repairing this with text substitution and it does not work. Deleting the score clause
+leaves the sentence broken more often than not:
+
+```
+before  This video earns an overall IA score of 1, with sub-scores of 0 for agent match, ...
+after   This videor agent match, 0 for object correctness, ...
+
+before  ..., so there are no obvious issues, corresponding to a sub-score of 2.
+after   ..., so there are no obvious issues, corresponding to a.
+
+before  this warrants an interaction realism score of 1 and an overall PA score of 2.
+after   thisof 2.
+```
+
+Only about **6% of the affected units have the score in a trailing clause that can be removed
+safely**. In the other 94% the number is load-bearing inside the sentence, so the sentence has to
+be written again. That is why we are asking for a regeneration and not sending you a patch list.
 
 ## One suggestion about how you generate
 

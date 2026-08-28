@@ -17,7 +17,10 @@ CJK = re.compile(r"[一-鿿]")
 # The score lives in its own JSON field. Any number in the prose puts the same answer in the row
 # twice, which is the defect this format exists to remove.
 SCORE_IN_PROSE = re.compile(
-    r"score of \d|score is \d|\bscore \d\b|\bsub[- ]?score|\(\s*[0-5]\s*\)\s*:", re.I)
+    r"score of \d|score is \d|\bscore \d\b|\bsub[- ]?scores?\b|\(\s*[0-5]\s*\)\s*:|"
+    r"\bmain score\b|overall\s+(?:PA|IA|physical|instruction)[^.]{0,25}score|"
+    r"\b(?:agent_consistency|scene_consistency|interaction_realism|agent_match|object_correct|"
+    r"goal_completed|physical_adherence|instruction_alignment)\s*=\s*\d", re.I)
 # At inference the model sees a video and a prompt. It never sees an annotator, a note, or the
 # other candidates in whatever pipeline produced this text.
 PIPELINE_REF = re.compile(
