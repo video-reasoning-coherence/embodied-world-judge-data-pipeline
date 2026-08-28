@@ -17,6 +17,10 @@ Output: `reformatted.jsonl` — `{"unit_id": ..., "reasoning": ...}` per line, s
 | a single flowing paragraph | 8,379 |
 | three lines, one per criterion | 12,975 |
 | four lines | 1,213 |
+| *of the above*, numbered as `1) Agent integrity: …` | 3,909 |
+
+One row still contains Chinese. Nothing else carries a score, a `(PAn)` marker, markdown or a
+reference to the annotation process — those classes are already clean and must stay clean.
 
 **2. Length currently tells the model the score.**
 
@@ -67,6 +71,9 @@ verdict instead of adding evidence.
 
 **Four lines** — the extra line is usually an overall verdict or a summary. Delete it and fold
 anything factual into the criterion it belongs to.
+
+**Numbered** (`1) Agent integrity: …`) — drop the `1) ` `2) ` `3) ` prefixes so each line opens with
+the criterion name itself. 3,909 rows look like this.
 
 ## Rules
 
