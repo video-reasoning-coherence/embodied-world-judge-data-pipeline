@@ -1,0 +1,50 @@
+[
+  {
+    "label": "ia, everything holds (main 5)",
+    "axis": "ia",
+    "main_score": 5,
+    "sub_scores": {
+      "agent_match": 2,
+      "object_correct": 2,
+      "goal_completed": 2
+    },
+    "chars": 283,
+    "reasoning": "Agent match: The white arm at the round table performs the task.\nObject correctness: Its gripper works over the white plate of white granular material on the table.\nGoal completion: The material is taken off the plate and brought over into the yellow bowl, which holds it at the end."
+  },
+  {
+    "label": "ia, one axis partial (main 4)",
+    "axis": "ia",
+    "main_score": 4,
+    "sub_scores": {
+      "agent_match": 2,
+      "object_correct": 2,
+      "goal_completed": 1
+    },
+    "chars": 329,
+    "reasoning": "Agent match: A single right hand performs the action while the other plates are untouched.\nObject correctness: It reaches the yellow plate rather than the red, green or blue ones.\nGoal completion: The hand only slides and tilts the plate along the cloth; it never leaves the table surface, so the plate is not actually picked up."
+  },
+  {
+    "label": "pa, severe violations (main 1)",
+    "axis": "pa",
+    "main_score": 2,
+    "sub_scores": {
+      "agent_consistency": 2,
+      "scene_consistency": 0,
+      "interaction_realism": 0
+    },
+    "chars": 391,
+    "reasoning": "Agent integrity: The hand and arm hold a steady shape and stay whole as they reach over the bag.\nScene & object consistency: The tote bag is empty at the start, then a large bunny materialises inside it and goes on swelling and changing shape from one moment to the next.\nInteraction realism: The bunny rises and reshapes with no real grip driving it, so its motion has no contact behind it."
+  },
+  {
+    "label": "pa, everything holds (main 5)",
+    "axis": "pa",
+    "main_score": 5,
+    "sub_scores": {
+      "agent_consistency": 2,
+      "scene_consistency": 2,
+      "interaction_realism": 2
+    },
+    "chars": 395,
+    "reasoning": "Agent integrity: The arm, wrist and gripper keep a solid consistent shape as they swing over the basket and back.\nScene & object consistency: The woven basket and the cans and packets laid out on the tiled floor hold their positions, colours and sizes.\nInteraction realism: The descent into the basket and the return are smooth and gravity-plausible, with nothing sliding or hovering on its own."
+  }
+]

@@ -92,6 +92,46 @@ Goal completion: The toast is lifted clear of the toaster and set down on the bl
 The names are the judge prompt's own criteria, copied exactly. A short verdict phrase may sit between
 the name and the colon (`Interaction realism severely violated:`) but the line must open with the name.
 
+## Four rows that are already right
+
+These come from the 825 rows that already sit inside the band — copy their density, not their
+wording. Note how a criterion that holds takes one clause, and how the severity of each line tracks
+its `sub_scores` entry without ever naming a number.
+
+**ia, everything holds (main 5)** — 283 characters, `sub_scores` {"agent_match": 2, "object_correct": 2, "goal_completed": 2}
+
+```
+Agent match: The white arm at the round table performs the task.
+Object correctness: Its gripper works over the white plate of white granular material on the table.
+Goal completion: The material is taken off the plate and brought over into the yellow bowl, which holds it at the end.
+```
+
+**ia, one axis partial (main 4)** — 329 characters, `sub_scores` {"agent_match": 2, "object_correct": 2, "goal_completed": 1}
+
+```
+Agent match: A single right hand performs the action while the other plates are untouched.
+Object correctness: It reaches the yellow plate rather than the red, green or blue ones.
+Goal completion: The hand only slides and tilts the plate along the cloth; it never leaves the table surface, so the plate is not actually picked up.
+```
+
+**pa, severe violations (main 1)** — 391 characters, `sub_scores` {"agent_consistency": 2, "scene_consistency": 0, "interaction_realism": 0}
+
+```
+Agent integrity: The hand and arm hold a steady shape and stay whole as they reach over the bag.
+Scene & object consistency: The tote bag is empty at the start, then a large bunny materialises inside it and goes on swelling and changing shape from one moment to the next.
+Interaction realism: The bunny rises and reshapes with no real grip driving it, so its motion has no contact behind it.
+```
+
+**pa, everything holds (main 5)** — 395 characters, `sub_scores` {"agent_consistency": 2, "scene_consistency": 2, "interaction_realism": 2}
+
+```
+Agent integrity: The arm, wrist and gripper keep a solid consistent shape as they swing over the basket and back.
+Scene & object consistency: The woven basket and the cans and packets laid out on the tiled floor hold their positions, colours and sizes.
+Interaction realism: The descent into the basket and the return are smooth and gravity-plausible, with nothing sliding or hovering on its own.
+```
+
+They are also in [`gold_examples.json`](gold_examples.json).
+
 ## What to do, by shape
 
 **Already three lines and inside the band** — leave it alone. Copy it through unchanged.
