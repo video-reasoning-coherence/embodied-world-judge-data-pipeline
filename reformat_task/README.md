@@ -8,6 +8,26 @@ Input: [`units_22568.jsonl`](units_22568.jsonl) — one JSON object per line, on
 pair, each carrying its existing text in `current_reasoning`.
 Output: `reformatted.jsonl` — `{"unit_id": ..., "reasoning": ...}` per line, same `unit_id` values.
 
+### You need only this one file
+
+**`units_22568.jsonl` already contains both halves of the training set.** There is nothing to fetch
+or join. The `batch` field says which half a row came from:
+
+| `batch` | rows | where it came from | typical shape |
+| --- | ---: | --- | --- |
+| `rewritten_v3` | 10,976 | already published as `final/reasoning_v3.jsonl` on the dataset | three lines, too long |
+| `original_reasoning` | 11,592 | the `pa_reasoning` / `ia_reasoning` columns of `final/train.jsonl` | one paragraph, three lines, four lines, or numbered |
+
+```bash
+wc -l units_22568.jsonl                                            # 22568
+jq -c 'select(.batch=="rewritten_v3")'      units_22568.jsonl | wc -l   # 10976
+jq -c 'select(.batch=="original_reasoning")' units_22568.jsonl | wc -l   # 11592
+```
+
+**Process every row the same way.** The `batch` value is provenance, not an instruction — the target
+is identical for both, and the whole point is that the two halves stop being distinguishable. Deliver
+one `reformatted.jsonl` covering all 22,568.
+
 ## Why this is worth doing
 
 **1. Three layouts are mixed together.**
