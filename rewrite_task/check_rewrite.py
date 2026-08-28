@@ -40,11 +40,12 @@ AXIS_VARIANTS = {
 VERDICT = re.compile(r"\((?:PA|IA)[1-5]\)")
 FRAME = re.compile(r"\bf\d{2}\b")
 SCAFFOLD = re.compile(r"[✓⚠]|代\s")
-# Floors, not targets. The target form is one line per axis in the annotator's own density, which
-# lands around 400-500 chars; these floors sit below that so a terse-but-complete answer passes and a
-# stub does not. Deliberately NOT near the old prose corpus median -- padding to that length would
-# mean inventing.
-MIN_CHARS = {"pa": 250, "ia": 220}
+# Floors, not targets. One line per axis at the annotator's own density lands around 250-400 chars,
+# and a unit where nothing went wrong is legitimately at the short end -- there is little to report
+# beyond what the clip shows. These floors sit below that so a terse-but-complete answer passes and a
+# stub does not. Deliberately NOT near the old prose corpus median: padding to that length would mean
+# inventing.
+MIN_CHARS = {"pa": 200, "ia": 170}
 
 
 def load(path):

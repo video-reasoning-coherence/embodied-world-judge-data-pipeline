@@ -218,9 +218,11 @@ and the note says 严重违反, so the line opens `Severe violation.`
 | any number presented as a score | same |
 | markdown, bullets, blank lines | the field is plain text, three lines |
 
-**Length.** Around 400–500 characters. Write what the note supports and stop; do not pad. The
-earlier prose form ran to ~800 and that extra material was connective language rather than
-observation.
+**Length.** Around 250–400 characters, and shorter for a unit where nothing went wrong. Describe
+what the clip shows and stop; do not pad. A criterion that holds needs one clause — *"Agent match:
+the right gripper performs the task throughout."* — not a sentence explaining that nothing else
+intervened. The earlier prose form ran to ~800 characters and that extra material was connective
+language rather than observation.
 
 **Source terms map to them like this.** Notes are inconsistent in wording; these are the common
 forms, not an exhaustive list:
