@@ -14,6 +14,23 @@ AXIS_NAMES = {
     "ia": ["Agent match", "Object correctness", "Goal completion"],
 }
 CJK = re.compile(r"[一-鿿]")
+# The score lives in its own JSON field. Any number in the prose puts the same answer in the row
+# twice, which is the defect this format exists to remove.
+SCORE_IN_PROSE = re.compile(
+    r"score of \d|score is \d|\bscore \d\b|\bsub[- ]?score|\(\s*[0-5]\s*\)\s*:", re.I)
+# At inference the model sees a video and a prompt. It never sees an annotator, a note, or the
+# other candidates in whatever pipeline produced this text.
+PIPELINE_REF = re.compile(
+    r"\bannotator|\bthe note\b|\bcandidates?\b|some inputs|other inputs|\bconsensus\b|"
+    r"human note|as reported|\breportedly\b", re.I)
+# Accepted misspellings of an axis name, so the failure says "wrong form" instead of "missing".
+AXIS_VARIANTS = {
+    "Scene & object consistency": ("scene and object consistency", "scene/object consistency",
+                                   "scene consistency", "agent consistency"),
+    "Agent integrity": ("agent consistency",),
+    "Object correctness": ("object correct",),
+    "Goal completion": ("goal completed",),
+}
 VERDICT = re.compile(r"\((?:PA|IA)[1-5]\)")
 FRAME = re.compile(r"\bf\d{2}\b")
 SCAFFOLD = re.compile(r"[✓⚠]|代\s")
@@ -67,10 +84,27 @@ def main():
             fails.append("%s: Chinese characters remain" % uid)
         if VERDICT.search(text):
             fails.append("%s: contains a (PAn)/(IAn) verdict" % uid)
+        hit = SCORE_IN_PROSE.search(text)
+        if hit:
+            fails.append("%s: states a score in the prose (%r) -- the score is already in the "
+                         "row's own field" % (uid, hit.group(0)))
+        hit = PIPELINE_REF.search(text)
+        if hit:
+            fails.append("%s: refers to something the model cannot see at inference (%r)"
+                         % (uid, hit.group(0)))
         if FRAME.search(text) or SCAFFOLD.search(text):
             fails.append("%s: annotator scaffolding not removed" % uid)
+        lowered = re.sub(r"\s+", " ", text.lower())
         for name in AXIS_NAMES[axis]:
-            if name not in text:
+            if name in text:
+                continue
+            variant = next((v for v in AXIS_VARIANTS.get(name, ()) if v in lowered), None)
+            if variant:
+                fails.append("%s: axis '%s' written as '%s' -- use the exact string"
+                             % (uid, name, variant))
+            elif name.lower() in lowered:
+                fails.append("%s: axis '%s' has the wrong capitalisation" % (uid, name))
+            else:
                 fails.append("%s: axis '%s' not covered" % (uid, name))
 
     missing = set(units) - set(seen)
