@@ -321,10 +321,18 @@ rows we know are still outstanding.
 
 ## Delivery
 
+Write your output into [`delivery/`](delivery/) — `delivery/rewritten.jsonl`, and
+`delivery/rewritten_no_note.jsonl` if you did the second package. Do not modify anything else in
+the repository. Then run the gate on both:
+
 ```bash
-python check_rewrite.py units.jsonl          rewritten.jsonl           # exit 0 = accepted
-python check_rewrite.py units_no_note.jsonl  rewritten_no_note.jsonl   # same gate, second package
+python check_rewrite.py units.jsonl         delivery/rewritten.jsonl          # exit 0 = accepted
+python check_rewrite.py units_no_note.jsonl delivery/rewritten_no_note.jsonl  # second package
 ```
+
+Deliver by pushing a branch and opening a pull request against `main` — never push to `main`
+directly. Paste the gate output for both files into the pull request description; see
+[`delivery/README.md`](delivery/README.md) for the exact commands.
 
 The gate enforces:
 
