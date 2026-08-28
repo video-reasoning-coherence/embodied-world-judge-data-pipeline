@@ -187,33 +187,40 @@ in the row, once.
 
 ## Target form
 
-Complete, fluent prose naming each axis in order, one to three sentences per axis, no bullet points,
-no numbering, no score restated. It should be indistinguishable from the reasoning already in the
-training set. This is a real example from that set:
+**One line per axis, in order, as `Axis name: observation`.** This mirrors the annotator's note —
+one clause per observed fact, nothing added to make the text flow. Exactly three lines, no blank
+lines, no header, no closing summary.
 
-> Agent integrity: the black robotic gripper remains mostly structurally consistent, with stable
-> fingers and joints and no obvious melting or extra parts; the second gripper seen early simply
-> moves out of view. Scene & object consistency: the kitchen background, toaster, carton, bottle,
-> basket, and counter remain largely stable, but the bread contents in the basket are
-> inconsistent — there appear to be multiple slices early, yet a single slice later. Interaction
-> realism: the gripper approaches and lifts a slice in a broadly plausible way, though the grasp
-> looks loose and the slice shifts without clear finger closure.
+```
+Agent integrity: The robotic arm and gripper stay structurally complete and consistent, with no melting, fused fingers or warping.
+Scene & object consistency: Several bananas shift position and deform without being touched, so their movement has no visible cause.
+Interaction realism: Severe violation. The gripper's fingers pass straight through the banana during the grasp, and the contact feedback does not follow physical rules.
+```
 
-**Length: write what the note supports and stop.** One clause per fact, no meta-commentary
-("this is where it breaks down"), no closing summary, no restating the score. The worked examples in
-`example_unit.json` run 587 characters (`pa`) and 495 (`ia`).
+That is a real unit: `agent_consistency` is 2 and the note says nothing about the arm, so line 1 is
+generic; `scene_consistency` is 1 and the note supplies the observation; `interaction_realism` is 0
+and the note says 严重违反, so the line opens `Severe violation.`
 
-For reference, the reasoning already in the training set is longer — `pa` median 1,044 characters,
-`ia` 669. **Do not pad to match it.** Those rows were written from the video, which supports more
-observations; yours are written from a short note, which bounds what can honestly be said. Reaching
-1,044 characters from a two-line note would require exactly the invention rule 1 forbids.
+**Axis names, exactly these strings, in this order, each followed by a colon:**
 
-**Axis names, exactly these strings, in this order:**
+| axis | line 1 | line 2 | line 3 |
+| --- | --- | --- | --- |
+| `pa` | `Agent integrity:` | `Scene & object consistency:` | `Interaction realism:` |
+| `ia` | `Agent match:` | `Object correctness:` | `Goal completion:` |
 
-| axis | names to use |
+**What must not appear**
+
+| | why |
 | --- | --- |
-| `pa` | `Agent integrity` · `Scene & object consistency` · `Interaction realism` |
-| `ia` | `Agent match` · `Object correctness` · `Goal completion` |
+| a `Physical adherence description:` header | not part of the prompt; start at the first axis |
+| an overall verdict line, e.g. `Physically inconsistent.` | the score is the row's own field |
+| a `(PA3)` / `(IA2)` marker | same reason — it puts the answer in the row twice |
+| any number presented as a score | same |
+| markdown, bullets, blank lines | the field is plain text, three lines |
+
+**Length.** Around 400–500 characters. Write what the note supports and stop; do not pad. The
+earlier prose form ran to ~800 and that extra material was connective language rather than
+observation.
 
 **Source terms map to them like this.** Notes are inconsistent in wording; these are the common
 forms, not an exhaustive list:

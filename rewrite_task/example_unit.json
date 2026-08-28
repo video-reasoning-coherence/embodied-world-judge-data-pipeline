@@ -1,9 +1,10 @@
 {
   "_comment": [
-    "Two real input units from units.jsonl, each with an output that would be accepted.",
-    "One clause per fact, no meta-commentary, no summary sentence, no restating the score.",
-    "PA: 'agent_consistency' is 2 and the note is silent on it, so it is stated generically with no invented detail. 'scene_consistency' is 1 and the note supplies the observation, used as given. 'interaction_realism' is 0 and the note says 严重违反, so the English is 'passes straight through' and 'never establishes contact', not 'slightly unnatural'.",
-    "IA: 'agent_match' is 2 and silent, so generic. 'object_correct' 1 and 'goal_completed' 1 come from the note; 部分完成 becomes 'only partly achieved'."
+    "Target form: ONE LINE PER AXIS, 'Axis name: observation'. This mirrors the annotator's note - one clause per observed fact, nothing added to make it flow.",
+    "All three axes must appear even when the note is silent about one: the prompt says the reasoning must address each criterion. A silent axis gets a short line derived from its sub-score, with no invented specifics.",
+    "No overall verdict line, no (PAn) marker, no 'description:' header, and no score anywhere - the score is already in the row's own field.",
+    "PA example: agent_consistency is 2 and the note is silent, so line 1 is generic. scene_consistency is 1 and the note supplies the observation. interaction_realism is 0 and the note says 严重违反, so the line opens 'Severe violation.'",
+    "IA example: agent_match is 2 and silent. object_correct 1 and goal_completed 1 come from the note; 部分完成 becomes 'Partially completed.'"
   ],
   "pa_example": {
     "input": {
@@ -36,7 +37,7 @@
     },
     "acceptable_output": {
       "unit_id": "data__agibot_world__generated_data__abot_physworld_f113_prefix__task_0012__episode_0001__1__task_0012_episode_0001|pa",
-      "reasoning": "Agent integrity: the arm and gripper stay structurally complete and consistent throughout — no melting, no fused or extra fingers, no warping. Scene & object consistency: the scene is otherwise stable, but several bananas shift position and deform while nothing is touching them, so their movement has no visible cause. Interaction realism: when the gripper closes on a banana, the fingers pass straight through the fruit instead of meeting its surface; the grasp never establishes contact, the banana shows no contact response, and the motion does not obey collision or support physics."
+      "reasoning": "Agent integrity: The robotic arm and gripper stay structurally complete and consistent, with no melting, fused fingers or warping.\nScene & object consistency: Several bananas shift position and deform without being touched, so their movement has no visible cause.\nInteraction realism: Severe violation. The gripper's fingers pass straight through the banana during the grasp, and the contact feedback does not follow physical rules."
     }
   },
   "ia_example": {
@@ -70,7 +71,7 @@
     },
     "acceptable_output": {
       "unit_id": "data__agibot_world__generated_data__abot_physworld_f113_prefix__task_0002__episode_0001__1__task_0002_episode_0001|ia",
-      "reasoning": "Agent match: the manipulation is performed by the same gripper shown in the initial frame, with no different or newly introduced manipulator. Object correctness: the gripper handles the clear bubble wrap pouch, one of the instructed targets, but never picks up the white rectangular product box, which the instruction also names. Goal completion: the bubble wrap pouch ends up inside the cardboard box, while the product box remains where it started, so the packing task is only partly achieved."
+      "reasoning": "Agent match: The manipulation is carried out by the gripper shown in the initial frame, with no other agent involved.\nObject correctness: Only the clear bubble wrap pouch is handled; the white rectangular product box the instruction also names is never picked up.\nGoal completion: Partially completed. The bubble wrap pouch is placed into the cardboard box, but the product box is left where it started."
     }
   }
 }

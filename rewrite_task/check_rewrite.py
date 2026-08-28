@@ -40,11 +40,11 @@ AXIS_VARIANTS = {
 VERDICT = re.compile(r"\((?:PA|IA)[1-5]\)")
 FRAME = re.compile(r"\bf\d{2}\b")
 SCAFFOLD = re.compile(r"[✓⚠]|代\s")
-# Floors, not targets. A concise answer that addresses three criteria lands around 500-600 chars
-# (see example_unit.json); these floors sit below that so terse-but-complete passes and a stub does
-# not. Deliberately NOT set near the existing reasoning's median -- those rows were written from the
-# video and are longer; padding a note-derived answer up to them would mean inventing.
-MIN_CHARS = {"pa": 350, "ia": 280}
+# Floors, not targets. The target form is one line per axis in the annotator's own density, which
+# lands around 400-500 chars; these floors sit below that so a terse-but-complete answer passes and a
+# stub does not. Deliberately NOT near the old prose corpus median -- padding to that length would
+# mean inventing.
+MIN_CHARS = {"pa": 250, "ia": 220}
 
 
 def load(path):
@@ -97,9 +97,17 @@ def main():
         if MARKUP.search(text):
             fails.append("%s: contains markdown (heading, bold or bullet) -- the reasoning is plain "
                          "prose inside a JSON string" % uid)
-        if "\n" in text:
-            fails.append("%s: contains a line break -- write one paragraph, axes separated by "
-                         "'Axis name: ' rather than by layout" % uid)
+        lines = [l.strip() for l in text.split("\n") if l.strip()]
+        if len(lines) != 3:
+            fails.append("%s: has %d non-empty lines, expected exactly 3 -- one line per axis"
+                         % (uid, len(lines)))
+        for i, name in enumerate(AXIS_NAMES[axis]):
+            if i < len(lines) and not lines[i].startswith(name + ":"):
+                fails.append("%s: line %d should start with '%s:' but starts %r"
+                             % (uid, i + 1, name, lines[i][:40]))
+        if re.search(r"description\s*:", text, re.I):
+            fails.append("%s: contains a 'description:' header -- start directly with the first axis"
+                         % uid)
         hit = PIPELINE_REF.search(text)
         if hit:
             fails.append("%s: refers to something the model cannot see at inference (%r)"
