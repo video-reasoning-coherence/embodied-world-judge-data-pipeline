@@ -14,6 +14,9 @@ AXIS_NAMES = {
     "ia": ["Agent match", "Object correctness", "Goal completion"],
 }
 CJK = re.compile(r"[一-鿿]")
+# The reasoning is a plain-prose JSON string field. Markdown headings, bold and bullets teach the
+# model to emit layout it should never produce.
+MARKUP = re.compile(r"^[ \t]*#{1,6}[ \t]|\*\*|^[ \t]*[-*][ \t]|^[ \t]*\d+[.)][ \t]", re.M)
 # The score lives in its own JSON field. Any number in the prose puts the same answer in the row
 # twice, which is the defect this format exists to remove.
 SCORE_IN_PROSE = re.compile(
@@ -91,6 +94,12 @@ def main():
         if hit:
             fails.append("%s: states a score in the prose (%r) -- the score is already in the "
                          "row's own field" % (uid, hit.group(0)))
+        if MARKUP.search(text):
+            fails.append("%s: contains markdown (heading, bold or bullet) -- the reasoning is plain "
+                         "prose inside a JSON string" % uid)
+        if "\n" in text:
+            fails.append("%s: contains a line break -- write one paragraph, axes separated by "
+                         "'Axis name: ' rather than by layout" % uid)
         hit = PIPELINE_REF.search(text)
         if hit:
             fails.append("%s: refers to something the model cannot see at inference (%r)"
