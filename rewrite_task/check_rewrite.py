@@ -27,8 +27,9 @@ SCORE_IN_PROSE = re.compile(
 # At inference the model sees a video and a prompt. It never sees an annotator, a note, or the
 # other candidates in whatever pipeline produced this text.
 PIPELINE_REF = re.compile(
-    r"\bannotator|\bthe note\b|\bcandidates?\b|some inputs|other inputs|\bconsensus\b|"
-    r"human note|as reported|\breportedly\b", re.I)
+    r"\bannotator|\bthe note (?:says|said|states|describes|mentions|records|gives|notes)\b|"
+    r"\bper the note\b|\baccording to the note\b|\bhuman note\b|"
+    r"\bcandidates?\b|some inputs|other inputs|\bconsensus\b|as reported|\breportedly\b", re.I)
 # Accepted misspellings of an axis name, so the failure says "wrong form" instead of "missing".
 AXIS_VARIANTS = {
     "Scene & object consistency": ("scene and object consistency", "scene/object consistency",
