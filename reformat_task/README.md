@@ -32,7 +32,7 @@ Output for each batch: `{"unit_id": ..., "reasoning": ...}` per line, same `unit
 
 These were written to the target spec already. **Copy `current_reasoning` through unchanged.** They
 are included so the delivery is complete and so the checker can measure length across the whole set;
-14 of them sit just outside the band and may be nudged, nothing more.
+14 of them sit just outside the band — the checker names them and they should be trimmed to fit; nothing else changes.
 
 They are also the best examples of the target. Read a few before starting on B or C.
 
@@ -96,9 +96,19 @@ python check_reformat.py batch_B_compress.jsonl reformatted_B.jsonl
 ```
 
 It enforces the shape, the names, the band and the "never present" list, and prints the median
-length per score. **If those medians spread by more than 80 characters the delivery fails**, because
-that spread is the label leaking through length — the thing this task exists to remove. Run it on
-all three batches together before calling the work done.
+length per score.
+
+**The per-score spread is only a failure on the combined delivery.** Run on one batch it is printed
+for information and nothing more — a single batch is skewed (batch A is 59% score-5), so its
+internal spread is not a target anyone can hit. Concatenate all three outputs and run it once more:
+there, **medians spreading by more than 80 characters fails the delivery**, because that spread is
+the label leaking through length and removing it is the point of this task.
+
+```bash
+cat reformatted_A.jsonl reformatted_B.jsonl reformatted_C.jsonl > reformatted_all.jsonl
+cat batch_A_ready.jsonl batch_B_compress.jsonl batch_C_relayout.jsonl > units_all.jsonl
+python check_reformat.py units_all.jsonl reformatted_all.jsonl
+```
 
 Report: how many rows you copied through, how many you compressed, and **any unit whose current text
 contradicts its own `sub_scores`** — list those rather than fixing them.
