@@ -46,8 +46,11 @@ SCAFFOLD = re.compile(r"[✓⚠]|代\s")
 # beyond what the clip shows. These floors sit below that so a terse-but-complete answer passes and a
 # stub does not. Deliberately NOT near the old prose corpus median: padding to that length would mean
 # inventing.
-MIN_CHARS = {"pa": 220, "ia": 200}
-MAX_CHARS = 420
+# Anchored on 7.20_baseline_rephrased itself, once its header and verdict lines -- which we
+# drop -- are removed: pa median 423, ia median 257. The 965 rows written from video already
+# sit there (pa 402 / ia 300), so this band is the reference format's own length.
+MIN_CHARS = {"pa": 300, "ia": 220}
+MAX_CHARS = {"pa": 550, "ia": 450}
 
 
 def load(path):
@@ -86,9 +89,10 @@ def main():
             fails.append("%s: empty reasoning" % uid)
             continue
         axis = units[uid]["axis"]
-        if len(text) > MAX_CHARS:
-            fails.append("%s: reasoning is %d chars, over the %d ceiling -- compress it"
-                         % (uid, len(text), MAX_CHARS))
+        axis = units[uid]["axis"]
+        if len(text) > MAX_CHARS[axis]:
+            fails.append("%s: reasoning is %d chars, over the %d ceiling for %s -- compress it"
+                         % (uid, len(text), MAX_CHARS[axis], axis))
         if len(text) < MIN_CHARS[axis]:
             fails.append("%s: reasoning is %d chars, below the %d floor for %s -- three criteria "
                          "cannot be addressed in that space" % (uid, len(text), MIN_CHARS[axis], axis))

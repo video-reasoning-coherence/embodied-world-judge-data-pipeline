@@ -33,11 +33,11 @@ one `reformatted.jsonl` covering all 22,568.
 > **Neither batch already meets it.** `rewritten_v3` has the right layout but is roughly twice the
 > length it should be; `original_reasoning` is wrong on both counts.
 >
-> | | layout | length (pa / ia median) | already in the 250–400 band |
+> | | layout | length (pa / ia median) | already in band |
 > | --- | --- | --- | ---: |
-> | `rewritten_v3` | three lines ✅ | 748 / 649 ❌ | 825 of 10,976 — 7.5% |
-> | `original_reasoning` | 1 / 3 / 4 lines, 3,909 numbered ❌ | 1,035 / 669 ❌ | 2 of 11,592 — 0.0% |
-> | **target** | **three lines** | **250–400** | — |
+> | `rewritten_v3` | three lines ✅ | 748 / 649 ❌ | 964 of 10,976 — 8.8% |
+> | `original_reasoning` | 1 / 3 / 4 lines, 3,909 numbered ❌ | 1,035 / 669 ❌ | ~0% |
+> | **target** | **three lines** | **pa 300–550 · ia 220–450** | — |
 >
 > So `rewritten_v3` keeps its layout and gets compressed; `original_reasoning` gets both. Converting
 > the second batch into the first batch's current form would leave the length untouched — and the
@@ -75,8 +75,13 @@ That is the point of the task; uniformity matters more than any particular lengt
 
 ## The target
 
-**Exactly three lines, one per criterion, each opening with the criterion's name, 250–400
-characters in total.**
+**Exactly three lines, one per criterion, each opening with the criterion's name.**
+
+**Length: `pa` 300–550 characters, `ia` 220–450.** That is not an arbitrary band — it is the length
+of the reference format itself. Strip `7.20_baseline_rephrased` of the two things we drop (its
+`description:` header line and its `(PAn)` verdict line) and what remains has a median of 423
+characters for `pa` and 257 for `ia`. The 965 rows already written to this spec sit at 402 and 300,
+and 98.5% of them are inside the band. Aim for the middle of it; do not compress past the floor.
 
 ```
 Agent match: The right gripper performs the task throughout.
@@ -94,7 +99,7 @@ the name and the colon (`Interaction realism severely violated:`) but the line m
 
 ## Four rows that are already right
 
-These come from the 825 rows that already sit inside the band — copy their density, not their
+These come from the rows that already sit inside the band — copy their density, not their
 wording. Note how a criterion that holds takes one clause, and how the severity of each line tracks
 its `sub_scores` entry without ever naming a number.
 
