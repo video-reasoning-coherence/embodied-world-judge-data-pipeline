@@ -1,199 +1,104 @@
-# Reformat the training reasoning to one uniform target
+# Reformat the training reasoning — three batches, text only
 
 Every reasoning in the training set already exists. **This task rewrites none of the judgements — it
-puts them all in one shape.** Right now the set is three different layouts at three different
-lengths, and that inconsistency is doing measurable harm.
+brings them all to one shape.** No video is needed: the observations are already written down, and
+the work is deleting restatement, not re-observing.
 
-Input: [`units_22568.jsonl`](units_22568.jsonl) — one JSON object per line, one per **(video, axis)**
-pair, each carrying its existing text in `current_reasoning`.
-Output: `reformatted.jsonl` — `{"unit_id": ..., "reasoning": ...}` per line, same `unit_id` values.
+**Read [`SFT_FORMAT.md`](SFT_FORMAT.md) first.** It defines the target and why each rule exists.
+Everything below is about which rows need what.
 
-### You need only this one file
+## The three batches
 
-**`units_22568.jsonl` already contains both halves of the training set.** There is nothing to fetch
-or join. The `batch` field says which half a row came from:
+They are split into separate files so they can be worked independently. **The target is identical
+for all three** — they differ only in how far from it they start.
 
-| `batch` | rows | where it came from | typical shape |
-| --- | ---: | --- | --- |
-| `rewritten_v3` | 10,976 | already published as `final/reasoning_v3.jsonl` on the dataset | three lines, too long |
-| `original_reasoning` | 11,592 | the `pa_reasoning` / `ia_reasoning` columns of `final/train.jsonl` | one paragraph, three lines, four lines, or numbered |
+| file | rows | already in target shape | what it needs |
+| --- | ---: | ---: | --- |
+| [`batch_A_ready.jsonl`](batch_A_ready.jsonl) | 965 | 951 (98.5%) | **nothing — copy through** |
+| [`batch_B_compress.jsonl`](batch_B_compress.jsonl) | 10,011 | 13 (0.1%) | **compress only** — layout is already right |
+| [`batch_C_relayout.jsonl`](batch_C_relayout.jsonl) | 11,592 | 65 (0.6%) | **relayout and compress** |
 
-```bash
-wc -l units_22568.jsonl                                            # 22568
-jq -c 'select(.batch=="rewritten_v3")'      units_22568.jsonl | wc -l   # 10976
-jq -c 'select(.batch=="original_reasoning")' units_22568.jsonl | wc -l   # 11592
+```
+                     current length         current layout
+batch A    pa  402 · ia  300  ✅        three lines, 100%
+batch B    pa  752 · ia  673  ❌        three lines, 100%
+batch C    pa 1035 · ia  673  ❌        three lines only 0.3%
 ```
 
-**Process every row the same way.** The `batch` value is provenance, not an instruction — the target
-is identical for both, and the whole point is that the two halves stop being distinguishable. Deliver
-one `reformatted.jsonl` covering all 22,568.
+Each row carries its text in `current_reasoning`, plus `axis`, `main_score` and `sub_scores`.
+Output for each batch: `{"unit_id": ..., "reasoning": ...}` per line, same `unit_id` values.
 
-> ### The target is not "make one batch look like the other"
->
-> **Neither batch already meets it.** `rewritten_v3` has the right layout but is roughly twice the
-> length it should be; `original_reasoning` is wrong on both counts.
->
-> | | layout | length (pa / ia median) | already in band |
-> | --- | --- | --- | ---: |
-> | `rewritten_v3` | three lines ✅ | 748 / 649 ❌ | 964 of 10,976 — 8.8% |
-> | `original_reasoning` | 1 / 3 / 4 lines, 3,909 numbered ❌ | 1,035 / 669 ❌ | ~0% |
-> | **target** | **three lines** | **pa 300–550 · ia 220–450** | — |
->
-> So `rewritten_v3` keeps its layout and gets compressed; `original_reasoning` gets both. Converting
-> the second batch into the first batch's current form would leave the length untouched — and the
-> length is the defect this task exists to remove.
+### batch A — 965 rows, nothing to do
 
-## Why this is worth doing
+These were written to the target spec already. **Copy `current_reasoning` through unchanged.** They
+are included so the delivery is complete and so the checker can measure length across the whole set;
+14 of them sit just outside the band and may be nudged, nothing more.
 
-**1. Three layouts are mixed together.**
+They are also the best examples of the target. Read a few before starting on B or C.
 
-| current shape | rows |
+### batch B — 10,011 rows, compress only
+
+Three lines with the right names already; every one is too long (pa 752 / ia 673 against a target of
+about 420 / 300). Do not re-lay-out and do not re-judge. Cut:
+
+- clauses that restate the verdict — *"so the instructed transfer is achieved"*, *"which indicates
+  the interaction is not physically plausible"*, *"making the object persistence unreliable"*
+- second sentences that repeat the first in other words
+- *"with no other agent intervening"* and similar, where the criterion simply holds
+
+```
+before (349 chars, sub_score 2)
+Agent integrity is generally stable: both robotic arms maintain coherent shapes, proportions,
+gripper structure, and attachment points throughout the sequence, with no obvious limb duplication
+or deformation. Their motions are plausible in broad kinematic terms, and the grippers remain
+visually consistent as they approach, lift, and place the items.
+
+after
+Agent integrity: Both arms and grippers keep coherent shape and attachment throughout, with no
+duplication or deformation.
+```
+
+### batch C — 11,592 rows, relayout and compress
+
+The most work. Current shapes:
+
+| shape | rows |
 | --- | ---: |
-| a single flowing paragraph | 8,379 |
-| three lines, one per criterion | 12,975 |
+| one flowing paragraph | 8,379 |
+| three lines | 1,999 |
 | four lines | 1,213 |
-| *of the above*, numbered as `1) Agent integrity: …` | 3,909 |
+| *of the above*, numbered `1) Agent integrity: …` | 3,909 |
 
-One row still contains Chinese. Nothing else carries a score, a `(PAn)` marker, markdown or a
-reference to the annotation process — those classes are already clean and must stay clean.
+- **one paragraph** — split at each criterion name, then compress as for batch B
+- **four lines** — the extra line is an overall verdict or summary; delete it and fold anything
+  factual into the criterion it belongs to
+- **numbered** — drop the `1) ` `2) ` `3) ` prefixes so each line opens with the criterion name
+- 96.1% already use the canonical criterion names; fix the rest
 
-**2. Length currently tells the model the score.**
-
-| main score | rows | median characters |
-|---:|---:|---:|
-| 1 | 1,578 | 793 |
-| 2 | 6,496 | 767 |
-| 3 | 7,283 | 779 |
-| 4 | 5,172 | 779 |
-| **5** | **2,039** | **537** |
-
-Score 5 is the only class that is visibly shorter, because the units where nothing went wrong were
-written separately and more briefly. A model trained on this can learn *short answer → score 5*, and
-since it emits the reasoning before the score, a short generation drags the score upward — in the
-class it already predicts least often. **Making every row the same length band removes that signal.**
-That is the point of the task; uniformity matters more than any particular length.
-
-## The target
-
-**Exactly three lines, one per criterion, each opening with the criterion's name.**
-
-**Length: `pa` 300–550 characters, `ia` 220–450.** That is not an arbitrary band — it is the length
-of the reference format itself. Strip `7.20_baseline_rephrased` of the two things we drop (its
-`description:` header line and its `(PAn)` verdict line) and what remains has a median of 423
-characters for `pa` and 257 for `ia`. The 965 rows already written to this spec sit at 402 and 300,
-and 98.5% of them are inside the band. Aim for the middle of it; do not compress past the floor.
-
-```
-Agent match: The right gripper performs the task throughout.
-Object correctness: It takes the slice of toast from the beige toaster.
-Goal completion: The toast is lifted clear of the toaster and set down on the blue plate.
-```
-
-| `axis` | line 1 | line 2 | line 3 |
-| --- | --- | --- | --- |
-| `pa` | `Agent integrity:` | `Scene & object consistency:` | `Interaction realism:` |
-| `ia` | `Agent match:` | `Object correctness:` | `Goal completion:` |
-
-The names are the judge prompt's own criteria, copied exactly. A short verdict phrase may sit between
-the name and the colon (`Interaction realism severely violated:`) but the line must open with the name.
-
-## Four rows that are already right
-
-These come from the rows that already sit inside the band — copy their density, not their
-wording. Note how a criterion that holds takes one clause, and how the severity of each line tracks
-its `sub_scores` entry without ever naming a number.
-
-**ia, everything holds (main 5)** — 283 characters, `sub_scores` {"agent_match": 2, "object_correct": 2, "goal_completed": 2}
-
-```
-Agent match: The white arm at the round table performs the task.
-Object correctness: Its gripper works over the white plate of white granular material on the table.
-Goal completion: The material is taken off the plate and brought over into the yellow bowl, which holds it at the end.
-```
-
-**ia, one axis partial (main 4)** — 329 characters, `sub_scores` {"agent_match": 2, "object_correct": 2, "goal_completed": 1}
-
-```
-Agent match: A single right hand performs the action while the other plates are untouched.
-Object correctness: It reaches the yellow plate rather than the red, green or blue ones.
-Goal completion: The hand only slides and tilts the plate along the cloth; it never leaves the table surface, so the plate is not actually picked up.
-```
-
-**pa, severe violations (main 1)** — 391 characters, `sub_scores` {"agent_consistency": 2, "scene_consistency": 0, "interaction_realism": 0}
-
-```
-Agent integrity: The hand and arm hold a steady shape and stay whole as they reach over the bag.
-Scene & object consistency: The tote bag is empty at the start, then a large bunny materialises inside it and goes on swelling and changing shape from one moment to the next.
-Interaction realism: The bunny rises and reshapes with no real grip driving it, so its motion has no contact behind it.
-```
-
-**pa, everything holds (main 5)** — 395 characters, `sub_scores` {"agent_consistency": 2, "scene_consistency": 2, "interaction_realism": 2}
-
-```
-Agent integrity: The arm, wrist and gripper keep a solid consistent shape as they swing over the basket and back.
-Scene & object consistency: The woven basket and the cans and packets laid out on the tiled floor hold their positions, colours and sizes.
-Interaction realism: The descent into the basket and the return are smooth and gravity-plausible, with nothing sliding or hovering on its own.
-```
-
-They are also in [`gold_examples.json`](gold_examples.json).
-
-## What to do, by shape
-
-**Already three lines and inside the band** — leave it alone. Copy it through unchanged.
-
-**Three lines but too long** (most of them) — compress. Keep the concrete observations: which
-manipulator acts, which object is handled, what goes wrong or what is achieved. Cut the connective
-padding — clauses like *"so the instructed transfer is achieved"*, *"with no other agent
-intervening"*, *"which indicates that the interaction is not physically plausible"* restate the
-verdict instead of adding evidence.
-
-**One paragraph** — split it at each criterion name, then compress the same way.
-
-**Four lines** — the extra line is usually an overall verdict or a summary. Delete it and fold
-anything factual into the criterion it belongs to.
-
-**Numbered** (`1) Agent integrity: …`) — drop the `1) ` `2) ` `3) ` prefixes so each line opens with
-the criterion name itself. 3,909 rows look like this.
-
-## Rules
+## Rules that apply to all three
 
 1. **Do not change any judgement.** If the current text says the grasp fails, the new text says the
-   grasp fails. You are shortening and re-laying-out, not re-deciding. Never look at the video and
-   form a different opinion — that is a different task.
-2. **Every line must agree with its `sub_scores` entry** — `2` holds, `1` a minor problem, `0`
-   clearly violated. The current text already does; keep it that way while compressing. This is the
-   one error class the checker cannot catch, so it needs your attention rather than the script's.
-3. **Do not drop a criterion to save space.** All three lines stay, even when one has nothing to
-   report; a criterion that holds needs one clause.
+   grasp fails. You are shortening and re-laying-out, not re-deciding.
+2. **Every line must agree with its `sub_scores` entry.** The current text already does; keep it that
+   way while compressing. **The checker cannot verify this** — it needs your attention.
+3. **Do not drop a criterion to save space.** All three lines stay.
 4. **Cut evidence last.** Remove restatement, hedging and summary first. If a line is still too long
    with two concrete observations, keep the more specific one.
-5. **Never write** a number, a score, `sub-score`, `(PA3)`, a `description:` header, markdown, a
-   blank line, a fourth line, Chinese, or any reference to an annotator, a note, or how the text was
-   produced. At inference the model sees a video and a prompt and nothing else.
-6. `main_score` and `sub_scores` are given. You never change them.
-
-## Fields
-
-| field | meaning |
-| --- | --- |
-| `unit_id` | `<item_id>\|<axis>` — echo back unchanged |
-| `axis` | `pa` or `ia`, decides which three criteria apply |
-| `current_reasoning` | **the text to reformat** |
-| `main_score` | the 1–5 score for this axis; never appears in the prose |
-| `sub_scores` | the three 0/1/2 verdicts your three lines must agree with |
-| `batch` | `rewritten_v3` (already three lines, mostly needs compressing) or `original_reasoning` (mixed shapes) |
-| `video_url`, `init_frame_url`, `instruction_url` | available, but this task does not need them |
+5. Everything in the "Never present" table of [`SFT_FORMAT.md`](SFT_FORMAT.md) stays absent.
+6. `main_score` and `sub_scores` are given and are never edited.
 
 ## Delivery
 
+Per batch, or combined — the checker takes any units file and any output file:
+
 ```bash
-python check_reformat.py units_22568.jsonl reformatted.jsonl
+python check_reformat.py batch_B_compress.jsonl reformatted_B.jsonl
 ```
 
-It enforces every rule above that a script can check, and prints the median length per score with a
-**spread limit of 80 characters** — if the scores still separate by more than that, length is still
-carrying the label and the delivery is not finished.
+It enforces the shape, the names, the band and the "never present" list, and prints the median
+length per score. **If those medians spread by more than 80 characters the delivery fails**, because
+that spread is the label leaking through length — the thing this task exists to remove. Run it on
+all three batches together before calling the work done.
 
-Report: how many rows you copied through unchanged, how many you compressed, and any unit where the
-current text contradicts its own `sub_scores` — list those rather than quietly fixing them, since
-that is a judgement change and belongs to us.
+Report: how many rows you copied through, how many you compressed, and **any unit whose current text
+contradicts its own `sub_scores`** — list those rather than fixing them.
