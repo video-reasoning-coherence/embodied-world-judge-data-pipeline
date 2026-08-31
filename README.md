@@ -12,6 +12,9 @@ with the existing corpus.
 >
 > **Building new source data** — the rest of this README, plus `docs/`, `tools/` and
 > `examples/`. Start at [Quick start](#quick-start).
+> **Adding to the existing source set** is the common case and has its own guide:
+> [`docs/scale-up-source.md`](docs/scale-up-source.md). Read §0 first — only 3 of the 11
+> corpora can be extended by re-running code.
 >
 > **Rewriting annotator notes into training reasoning** — a self-contained text task
 > with its own data and its own acceptance gate. It shares nothing with the pipeline
@@ -170,6 +173,7 @@ Compares on `(dataset, task_name, episode_name)` and on `gt_path`. Accepts both
 
 ```text
 docs/
+  scale-up-source.md How to ADD source episodes to the existing corpus (start here)
   pipeline.md        How source data is built: corpora, clips, prompts
   data-format.md     summary.json specification and directory layout
   generation.md      Pointer to the video generation stage in the main repo
