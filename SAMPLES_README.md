@@ -33,11 +33,18 @@ dataset's share preserved to within 0.1 pp.
 | egoscaler_human | 91 | 9.1% | human egocentric |
 | epickitchens_human | 55 | 5.5% | human egocentric |
 | dreamdojo_hv | 43 | 4.3% | real robot |
-| egodex | 22 | 2.2% | human egocentric |
+| egodex | 22 | 2.2% | real robot (lab) |
 
 Excluded: `robotwin` (198) and `libero` (100) — rendered simulation, confirmed by
-inspecting a conditioning frame from each rather than by name. `dreamdojo_hv` and
-`gr1_inlab` read as synthetic but are real lab capture, and are kept.
+inspecting conditioning frames rather than by name.
+
+Every kept dataset was re-checked against sampled frames (3 each for
+`dreamdojo_hv`, `gr1_inlab`, `open_x_embodiment`, `egodex`; 2 each for
+`egodex_human`, `agibot_world`, `droid`). All are photographic capture.
+`dreamdojo_hv` and `gr1_inlab` read as synthetic but are real lab footage.
+`egodex` is listed as human egocentric in the pipeline docs, but its frames show
+real robot hands in the same lab rig — the capture column here reflects the
+frames, not the doc.
 
 Entries are sorted by `(dataset, task, episode)`.
 Train/test membership was not used as a filter.
