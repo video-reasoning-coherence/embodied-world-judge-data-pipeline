@@ -1,37 +1,32 @@
-# `samples_1000_assets.json` — 1,000 asset bundles for annotation
+# `samples_1000_assets.json` — 1,000 source-episode asset bundles
 
-A stratified sample of 1,000 items drawn from the existing corpus. Each entry
-points at four Hugging Face URLs and nothing else: no scores, no labels.
+1,000 distinct source episodes sampled from the corpus. Each entry holds three
+Hugging Face URLs and nothing else — no generated video, no generation model, no
+prompt, no scores, no labels.
 
 ## Entry format
 
 ```json
 {
-  "item_id": "data__<dataset>__generated_data__<model>__<task>__<episode>__1__<name>",
   "dataset": "droid",
   "task": "task_0031",
   "episode": "episode_0001",
-  "generation_model": "kling_prefix",
-  "init_frame_url":         ".../gt_data/<task>/<episode>/prompt/init_frame.png",
   "instruction_url":        ".../gt_data/<task>/<episode>/prompt/instruction.txt",
-  "gt_reference_video_url": ".../gt_data/<task>/<episode>/video.mp4",
-  "generated_video_url":    ".../generated_data/<model>/<task>/<episode>/1/video.mp4"
+  "init_frame_url":         ".../gt_data/<task>/<episode>/prompt/init_frame.png",
+  "gt_reference_video_url": ".../gt_data/<task>/<episode>/video.mp4"
 }
 ```
 
-All four resolve on `huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge`.
-Verified: 6 random entries × 4 URLs = 24/24 HTTP 200.
+All three live under
+`huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge`.
+Verified: 8 random entries × 3 URLs = 24/24 HTTP 200.
 
-## How it was sampled
+## Sampling
 
-- **One item per distinct source episode.** The corpus holds 2,481 generated
-  items over 1,079 source episodes; sampling one per episode gives 1,000
-  *distinct* (init frame, instruction, reference video) bundles with no repeated
-  source content.
-- **Dataset proportions preserved** — each dataset's share matches its share of
-  the source pool to within 0.1 pp.
-- **Generation models balanced** — where an episode had several generations, the
-  least-used model was taken, so 12 of the 15 models land within 72–79 items.
+- **One entry per source episode.** The corpus holds 1,079 distinct source
+  episodes; 1,000 of them are sampled, so no two entries share an instruction,
+  init frame or reference video.
+- **Dataset proportions preserved**, matching the source pool to within 0.1 pp.
 
 | dataset | n | share | pool share |
 | --- | ---: | ---: | ---: |
@@ -47,13 +42,9 @@ Verified: 6 random entries × 4 URLs = 24/24 HTTP 200.
 | dreamdojo_hv | 39 | 3.9% | 3.9% |
 | egodex | 22 | 2.2% | 2.2% |
 
-`veo31_lite_*` (48 each) and `genie_prefix` (5) fall below the 72–79 band
-because the corpus contains fewer of their generations.
+Entries are sorted by `(dataset, task, episode)`.
 
-## Notes
+## Note
 
-- Train/test membership was **not** used as a filter, so entries may overlap the
-  released splits. Check `item_id` against `bench/` if disjointness is required.
-- The reference video and instruction are **per source episode**, so items
-  sharing a `(dataset, task, episode)` would share them — by construction no two
-  entries here do.
+Train/test membership was not used as a filter, so these source episodes may
+underlie items in the released splits.
