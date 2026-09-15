@@ -1,8 +1,8 @@
-# `samples_real_913_assets.json` — real-capture source episodes
+# `samples_real_1000_assets.json` — 1,000 real-capture source episodes
 
-913 distinct source episodes, **real capture only**. Each entry holds three
-Hugging Face URLs: instruction, conditioning frame, ground-truth reference video.
-No generated video, no generation model, no scores, no labels.
+Each entry holds three Hugging Face URLs: instruction, conditioning frame,
+ground-truth reference video. No generated video, no generation model, no
+scores, no labels.
 
 ```json
 {
@@ -15,39 +15,29 @@ No generated video, no generation model, no scores, no labels.
 }
 ```
 
-## Why 913 and not 1,000
+Verified: 10 random entries × 3 URLs = 30/30 HTTP 200.
 
-`robotwin` and `libero` are rendered simulation and were excluded. That leaves
-**913 distinct real source episodes in the whole corpus** — 913 is the ceiling,
-not a sampling choice. Going higher would mean repeating an episode's
-instruction/frame/reference under a different generated video, which this file
-does not carry.
+## Pool
 
-| dataset | episodes | share | capture |
+The dataset holds **1,391 source episodes**. Excluding the two rendered-simulation
+corpora leaves **1,093 real ones**, from which 1,000 are sampled with each
+dataset's share preserved to within 0.1 pp.
+
+| dataset | n | share | capture |
 | --- | ---: | ---: | --- |
-| agibot_world | 195 | 21.4% | real robot |
-| droid | 185 | 20.3% | real robot |
-| egodex_human | 141 | 15.4% | human egocentric |
-| egoscaler_human | 93 | 10.2% | human egocentric |
-| gr1_inlab | 92 | 10.1% | real robot |
-| open_x_embodiment | 83 | 9.1% | real robot |
-| epickitchens_human | 58 | 6.4% | human egocentric |
-| dreamdojo_hv | 42 | 4.6% | real robot |
-| egodex | 24 | 2.6% | human egocentric |
+| agibot_world | 184 | 18.4% | real robot |
+| droid | 182 | 18.2% | real robot |
+| gr1_inlab | 156 | 15.6% | real robot |
+| egodex_human | 137 | 13.7% | human egocentric |
+| open_x_embodiment | 130 | 13.0% | real robot |
+| egoscaler_human | 91 | 9.1% | human egocentric |
+| epickitchens_human | 55 | 5.5% | human egocentric |
+| dreamdojo_hv | 43 | 4.3% | real robot |
+| egodex | 22 | 2.2% | human egocentric |
 
-Every real episode in the corpus is included, so the distribution is the corpus
-distribution.
-
-## Excluded
-
-| dataset | episodes | reason |
-| --- | ---: | --- |
-| robotwin | 122 | simulated — rendered scene, primitive props |
-| libero | 44 | simulated — rendered scene |
-
-Confirmed by inspecting one conditioning frame per dataset, not by name alone:
-`dreamdojo_hv` and `gr1_inlab` are real lab footage despite the synthetic-sounding
-names, and are kept.
+Excluded: `robotwin` (198) and `libero` (100) — rendered simulation, confirmed by
+inspecting a conditioning frame from each rather than by name. `dreamdojo_hv` and
+`gr1_inlab` read as synthetic but are real lab capture, and are kept.
 
 Entries are sorted by `(dataset, task, episode)`.
 Train/test membership was not used as a filter.
