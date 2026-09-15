@@ -65,6 +65,14 @@
  },
  {
   "dataset": "agibot_world",
+  "task": "task_0009",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0009/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0009/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0009/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
   "task": "task_0010",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0010/episode_0001/prompt/instruction.txt",
@@ -190,6 +198,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0025/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0025/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0025/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0026",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0026/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0026/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0026/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -385,6 +401,14 @@
  },
  {
   "dataset": "agibot_world",
+  "task": "task_0051",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0051/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0051/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0051/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
   "task": "task_0052",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0052/episode_0001/prompt/instruction.txt",
@@ -441,11 +465,27 @@
  },
  {
   "dataset": "agibot_world",
+  "task": "task_0059",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0059/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0059/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0059/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
   "task": "task_0060",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0060/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0060/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0060/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0061",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0061/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0061/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0061/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -577,6 +617,14 @@
  },
  {
   "dataset": "agibot_world",
+  "task": "task_0078",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0078/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0078/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0078/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
   "task": "task_0081",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0081/episode_0001/prompt/instruction.txt",
@@ -678,6 +726,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0093/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0093/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0093/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0094",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0094/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0094/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0094/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -814,6 +870,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0111/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0111/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0111/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0112",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0112/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0112/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0112/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -1025,6 +1089,14 @@
  },
  {
   "dataset": "agibot_world",
+  "task": "task_0140",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0140/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0140/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0140/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
   "task": "task_0141",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0141/episode_0001/prompt/instruction.txt",
@@ -1054,6 +1126,22 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0144/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0144/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0144/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0145",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0145/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0145/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0145/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0146",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0146/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0146/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0146/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -1166,6 +1254,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0161/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0161/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0161/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0162",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0162/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0162/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0162/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -1361,6 +1457,14 @@
  },
  {
   "dataset": "agibot_world",
+  "task": "task_0188",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0188/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0188/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0188/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
   "task": "task_0189",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0189/episode_0001/prompt/instruction.txt",
@@ -1398,6 +1502,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0193/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0193/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0193/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "agibot_world",
+  "task": "task_0194",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0194/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0194/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/agibot_world/gt_data/task_0194/episode_0001/video.mp4"
  },
  {
   "dataset": "agibot_world",
@@ -1617,6 +1729,14 @@
  },
  {
   "dataset": "dreamdojo_hv",
+  "task": "task_0025",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0025/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0025/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0025/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "dreamdojo_hv",
   "task": "task_0026",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0026/episode_0001/prompt/instruction.txt",
@@ -1654,6 +1774,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0031/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0031/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0031/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "dreamdojo_hv",
+  "task": "task_0033",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0033/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0033/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0033/episode_0001/video.mp4"
  },
  {
   "dataset": "dreamdojo_hv",
@@ -1702,6 +1830,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0039/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0039/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0039/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "dreamdojo_hv",
+  "task": "task_0040",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0040/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0040/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/dreamdojo_hv/gt_data/task_0040/episode_0001/video.mp4"
  },
  {
   "dataset": "dreamdojo_hv",
@@ -1801,6 +1937,14 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0006",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0006/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0006/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0006/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0007",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0007/episode_0001/prompt/instruction.txt",
@@ -1881,11 +2025,27 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0017",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0017/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0017/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0017/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0018",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0018/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0018/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0018/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0019",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0019/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0019/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0019/episode_0001/video.mp4"
  },
  {
   "dataset": "droid",
@@ -1934,6 +2094,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0025/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0025/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0025/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0026",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0026/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0026/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0026/episode_0001/video.mp4"
  },
  {
   "dataset": "droid",
@@ -1998,6 +2166,22 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0034/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0034/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0034/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0036",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0036/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0036/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0036/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0037",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0037/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0037/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0037/episode_0001/video.mp4"
  },
  {
   "dataset": "droid",
@@ -2209,6 +2393,14 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0066",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0066/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0066/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0066/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0067",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0067/episode_0001/prompt/instruction.txt",
@@ -2254,6 +2446,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0072/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0072/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0072/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0073",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0073/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0073/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0073/episode_0001/video.mp4"
  },
  {
   "dataset": "droid",
@@ -2321,6 +2521,14 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0084",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0084/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0084/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0084/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0085",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0085/episode_0001/prompt/instruction.txt",
@@ -2382,6 +2590,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0094/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0094/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0094/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0095",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0095/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0095/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0095/episode_0001/video.mp4"
  },
  {
   "dataset": "droid",
@@ -2657,6 +2873,14 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0133",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0133/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0133/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0133/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0134",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0134/episode_0001/prompt/instruction.txt",
@@ -2793,6 +3017,14 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0152",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0152/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0152/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0152/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0153",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0153/episode_0001/prompt/instruction.txt",
@@ -2822,6 +3054,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0156/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0156/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0156/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
+  "task": "task_0157",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0157/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0157/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0157/episode_0001/video.mp4"
  },
  {
   "dataset": "droid",
@@ -2985,6 +3225,14 @@
  },
  {
   "dataset": "droid",
+  "task": "task_0180",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0180/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0180/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0180/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "droid",
   "task": "task_0181",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/droid/gt_data/task_0181/episode_0001/prompt/instruction.txt",
@@ -3129,6 +3377,14 @@
  },
  {
   "dataset": "egodex",
+  "task": "task_0001",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0001/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0001/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0001/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex",
   "task": "task_0002",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0002/episode_0001/prompt/instruction.txt",
@@ -3241,6 +3497,14 @@
  },
  {
   "dataset": "egodex",
+  "task": "task_0016",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0016/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0016/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0016/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex",
   "task": "task_0017",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex/gt_data/task_0017/episode_0001/prompt/instruction.txt",
@@ -3342,6 +3606,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0005/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0005/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0005/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
+  "task": "task_0006",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0006/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0006/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0006/episode_0001/video.mp4"
  },
  {
   "dataset": "egodex_human",
@@ -3569,6 +3841,14 @@
  },
  {
   "dataset": "egodex_human",
+  "task": "task_0037",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0037/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0037/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0037/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
   "task": "task_0038",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0038/episode_0001/prompt/instruction.txt",
@@ -3681,6 +3961,22 @@
  },
  {
   "dataset": "egodex_human",
+  "task": "task_0052",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0052/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0052/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0052/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
+  "task": "task_0053",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0053/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0053/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0053/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
   "task": "task_0054",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0054/episode_0001/prompt/instruction.txt",
@@ -3758,6 +4054,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0064/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0064/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0064/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
+  "task": "task_0065",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0065/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0065/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0065/episode_0001/video.mp4"
  },
  {
   "dataset": "egodex_human",
@@ -3929,6 +4233,14 @@
  },
  {
   "dataset": "egodex_human",
+  "task": "task_0089",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0089/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0089/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0089/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
   "task": "task_0090",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0090/episode_0001/prompt/instruction.txt",
@@ -4097,11 +4409,27 @@
  },
  {
   "dataset": "egodex_human",
+  "task": "task_0111",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0111/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0111/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0111/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
   "task": "task_0112",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0112/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0112/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0112/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
+  "task": "task_0113",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0113/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0113/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0113/episode_0001/video.mp4"
  },
  {
   "dataset": "egodex_human",
@@ -4177,6 +4505,14 @@
  },
  {
   "dataset": "egodex_human",
+  "task": "task_0124",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0124/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0124/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0124/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
   "task": "task_0125",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0125/episode_0001/prompt/instruction.txt",
@@ -4230,6 +4566,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0131/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0131/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0131/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egodex_human",
+  "task": "task_0132",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0132/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0132/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egodex_human/gt_data/task_0132/episode_0001/video.mp4"
  },
  {
   "dataset": "egodex_human",
@@ -4481,6 +4825,14 @@
  },
  {
   "dataset": "egoscaler_human",
+  "task": "task_0018",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0018/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0018/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0018/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
   "task": "task_0019",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0019/episode_0001/prompt/instruction.txt",
@@ -4625,6 +4977,14 @@
  },
  {
   "dataset": "egoscaler_human",
+  "task": "task_0038",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0038/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0038/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0038/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
   "task": "task_0039",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0039/episode_0001/prompt/instruction.txt",
@@ -4654,6 +5014,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0042/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0042/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0042/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
+  "task": "task_0043",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0043/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0043/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0043/episode_0001/video.mp4"
  },
  {
   "dataset": "egoscaler_human",
@@ -4801,6 +5169,14 @@
  },
  {
   "dataset": "egoscaler_human",
+  "task": "task_0063",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0063/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0063/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0063/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
   "task": "task_0064",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0064/episode_0001/prompt/instruction.txt",
@@ -4905,6 +5281,14 @@
  },
  {
   "dataset": "egoscaler_human",
+  "task": "task_0079",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0079/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0079/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0079/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
   "task": "task_0080",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0080/episode_0001/prompt/instruction.txt",
@@ -4961,6 +5345,14 @@
  },
  {
   "dataset": "egoscaler_human",
+  "task": "task_0089",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0089/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0089/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0089/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
   "task": "task_0090",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0090/episode_0001/prompt/instruction.txt",
@@ -4982,6 +5374,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0092/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0092/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0092/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "egoscaler_human",
+  "task": "task_0093",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0093/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0093/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/egoscaler_human/gt_data/task_0093/episode_0001/video.mp4"
  },
  {
   "dataset": "egoscaler_human",
@@ -5046,6 +5446,22 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0001/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0001/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0001/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "epickitchens_human",
+  "task": "task_0002",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0002/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0002/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0002/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "epickitchens_human",
+  "task": "task_0003",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0003/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0003/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0003/episode_0001/video.mp4"
  },
  {
   "dataset": "epickitchens_human",
@@ -5225,6 +5641,14 @@
  },
  {
   "dataset": "epickitchens_human",
+  "task": "task_0026",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0026/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0026/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0026/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "epickitchens_human",
   "task": "task_0027",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0027/episode_0001/prompt/instruction.txt",
@@ -5310,6 +5734,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0037/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0037/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0037/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "epickitchens_human",
+  "task": "task_0038",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0038/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0038/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/epickitchens_human/gt_data/task_0038/episode_0001/video.mp4"
  },
  {
   "dataset": "epickitchens_human",
@@ -5553,6 +5985,14 @@
  },
  {
   "dataset": "gr1_inlab",
+  "task": "task_0017",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0017/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0017/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0017/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
   "task": "task_0018",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0018/episode_0001/prompt/instruction.txt",
@@ -5697,6 +6137,14 @@
  },
  {
   "dataset": "gr1_inlab",
+  "task": "task_0042",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0042/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0042/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0042/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
   "task": "task_0043",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0043/episode_0001/prompt/instruction.txt",
@@ -5726,6 +6174,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0049/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0049/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0049/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
+  "task": "task_0050",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0050/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0050/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0050/episode_0001/video.mp4"
  },
  {
   "dataset": "gr1_inlab",
@@ -5841,6 +6297,14 @@
  },
  {
   "dataset": "gr1_inlab",
+  "task": "task_0087",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0087/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0087/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0087/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
   "task": "task_0088",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0088/episode_0001/prompt/instruction.txt",
@@ -5870,6 +6334,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0093/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0093/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0093/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
+  "task": "task_0094",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0094/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0094/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0094/episode_0001/video.mp4"
  },
  {
   "dataset": "gr1_inlab",
@@ -6105,11 +6577,27 @@
  },
  {
   "dataset": "gr1_inlab",
+  "task": "task_0155",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0155/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0155/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0155/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
   "task": "task_0156",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0156/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0156/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0156/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "gr1_inlab",
+  "task": "task_0158",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0158/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0158/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0158/episode_0001/video.mp4"
  },
  {
   "dataset": "gr1_inlab",
@@ -6152,428 +6640,12 @@
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/gr1_inlab/gt_data/task_0170/episode_0001/video.mp4"
  },
  {
-  "dataset": "libero",
-  "task": "task_0002",
+  "dataset": "open_x_embodiment",
+  "task": "task_0001",
   "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0002/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0002/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0002/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0007",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0007/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0007/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0007/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0009",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0009/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0009/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0009/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0012",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0012/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0012/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0012/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0014",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0014/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0014/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0014/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0015",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0015/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0015/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0015/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0019",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0019/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0019/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0019/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0020",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0020/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0020/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0020/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0021",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0021/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0021/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0021/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0023",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0023/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0023/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0023/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0024",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0024/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0024/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0024/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0025",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0025/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0025/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0025/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0026",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0026/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0026/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0026/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0027",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0027/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0027/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0027/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0030",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0030/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0030/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0030/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0032",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0032/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0032/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0032/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0034",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0034/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0034/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0034/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0035",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0035/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0035/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0035/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0036",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0036/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0036/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0036/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0038",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0038/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0038/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0038/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0039",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0039/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0039/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0039/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0043",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0043/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0043/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0043/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0044",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0044/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0044/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0044/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0045",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0045/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0045/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0045/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0047",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0047/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0047/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0047/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0051",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0051/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0051/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0051/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0053",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0053/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0053/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0053/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0056",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0056/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0056/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0056/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0058",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0058/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0058/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0058/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0063",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0063/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0063/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0063/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0064",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0064/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0064/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0064/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0065",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0065/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0065/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0065/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0066",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0066/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0066/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0066/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0068",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0068/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0068/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0068/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0071",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0071/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0071/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0071/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0072",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0072/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0072/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0072/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0073",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0073/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0073/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0073/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0074",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0074/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0074/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0074/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0075",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0075/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0075/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0075/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0076",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0076/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0076/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0076/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0077",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0077/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0077/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0077/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0079",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0079/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0079/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0079/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0080",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0080/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0080/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0080/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0081",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0081/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0081/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0081/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0083",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0083/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0083/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0083/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0084",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0084/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0084/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0084/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0087",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0087/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0087/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0087/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0089",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0089/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0089/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0089/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0091",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0091/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0091/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0091/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0092",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0092/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0092/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0092/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0095",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0095/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0095/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0095/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0098",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0098/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0098/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0098/episode_0001/video.mp4"
- },
- {
-  "dataset": "libero",
-  "task": "task_0100",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0100/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0100/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/libero/gt_data/task_0100/episode_0001/video.mp4"
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0001/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0001/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0001/episode_0001/video.mp4"
  },
  {
   "dataset": "open_x_embodiment",
@@ -6598,6 +6670,22 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0004/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0004/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0004/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "open_x_embodiment",
+  "task": "task_0005",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0005/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0005/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0005/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "open_x_embodiment",
+  "task": "task_0006",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0006/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0006/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0006/episode_0001/video.mp4"
  },
  {
   "dataset": "open_x_embodiment",
@@ -6681,6 +6769,14 @@
  },
  {
   "dataset": "open_x_embodiment",
+  "task": "task_0032",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0032/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0032/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0032/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "open_x_embodiment",
   "task": "task_0033",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0033/episode_0001/prompt/instruction.txt",
@@ -6729,6 +6825,14 @@
  },
  {
   "dataset": "open_x_embodiment",
+  "task": "task_0041",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0041/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0041/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0041/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "open_x_embodiment",
   "task": "task_0043",
   "episode": "episode_0001",
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0043/episode_0001/prompt/instruction.txt",
@@ -6766,6 +6870,14 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0050/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0050/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0050/episode_0001/video.mp4"
+ },
+ {
+  "dataset": "open_x_embodiment",
+  "task": "task_0051",
+  "episode": "episode_0001",
+  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0051/episode_0001/prompt/instruction.txt",
+  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0051/episode_0001/prompt/init_frame.png",
+  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0051/episode_0001/video.mp4"
  },
  {
   "dataset": "open_x_embodiment",
@@ -7190,813 +7302,5 @@
   "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0141/episode_0001/prompt/instruction.txt",
   "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0141/episode_0001/prompt/init_frame.png",
   "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/open_x_embodiment/gt_data/task_0141/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0001",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0001/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0001/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0001/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0014",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0014/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0014/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0014/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0015",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0015/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0015/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0015/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0016",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0016/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0016/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0016/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0018",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0018/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0018/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0018/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0023",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0023/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0023/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0023/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0024",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0024/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0024/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0024/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0028",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0028/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0028/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0028/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0029",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0029/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0029/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0029/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0032",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0032/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0032/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0032/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0035",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0035/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0035/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0035/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0036",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0036/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0036/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0036/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0037",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0037/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0037/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0037/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0040",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0040/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0040/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0040/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0045",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0045/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0045/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0045/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0046",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0046/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0046/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0046/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0047",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0047/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0047/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0047/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0048",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0048/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0048/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0048/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0049",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0049/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0049/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0049/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0052",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0052/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0052/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0052/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0053",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0053/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0053/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0053/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0055",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0055/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0055/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0055/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0056",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0056/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0056/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0056/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0057",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0057/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0057/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0057/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0058",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0058/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0058/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0058/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0060",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0060/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0060/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0060/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0061",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0061/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0061/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0061/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0062",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0062/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0062/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0062/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0064",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0064/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0064/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0064/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0065",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0065/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0065/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0065/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0067",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0067/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0067/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0067/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0068",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0068/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0068/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0068/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0069",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0069/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0069/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0069/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0073",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0073/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0073/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0073/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0078",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0078/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0078/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0078/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0079",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0079/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0079/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0079/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0083",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0083/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0083/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0083/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0084",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0084/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0084/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0084/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0085",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0085/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0085/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0085/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0086",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0086/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0086/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0086/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0092",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0092/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0092/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0092/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0093",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0093/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0093/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0093/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0094",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0094/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0094/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0094/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0096",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0096/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0096/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0096/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0100",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0100/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0100/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0100/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0101",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0101/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0101/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0101/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0103",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0103/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0103/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0103/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0104",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0104/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0104/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0104/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0106",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0106/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0106/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0106/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0107",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0107/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0107/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0107/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0109",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0109/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0109/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0109/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0110",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0110/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0110/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0110/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0112",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0112/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0112/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0112/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0114",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0114/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0114/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0114/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0117",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0117/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0117/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0117/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0118",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0118/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0118/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0118/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0119",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0119/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0119/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0119/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0120",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0120/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0120/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0120/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0121",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0121/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0121/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0121/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0122",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0122/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0122/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0122/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0124",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0124/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0124/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0124/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0126",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0126/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0126/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0126/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0127",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0127/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0127/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0127/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0128",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0128/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0128/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0128/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0130",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0130/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0130/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0130/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0131",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0131/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0131/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0131/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0134",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0134/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0134/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0134/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0135",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0135/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0135/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0135/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0137",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0137/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0137/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0137/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0142",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0142/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0142/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0142/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0144",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0144/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0144/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0144/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0148",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0148/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0148/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0148/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0149",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0149/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0149/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0149/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0151",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0151/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0151/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0151/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0153",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0153/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0153/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0153/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0154",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0154/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0154/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0154/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0155",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0155/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0155/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0155/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0156",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0156/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0156/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0156/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0159",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0159/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0159/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0159/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0162",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0162/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0162/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0162/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0166",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0166/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0166/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0166/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0167",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0167/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0167/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0167/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0169",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0169/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0169/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0169/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0172",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0172/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0172/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0172/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0173",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0173/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0173/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0173/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0175",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0175/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0175/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0175/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0177",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0177/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0177/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0177/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0179",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0179/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0179/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0179/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0180",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0180/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0180/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0180/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0181",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0181/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0181/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0181/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0182",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0182/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0182/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0182/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0183",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0183/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0183/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0183/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0185",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0185/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0185/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0185/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0186",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0186/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0186/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0186/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0187",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0187/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0187/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0187/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0190",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0190/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0190/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0190/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0191",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0191/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0191/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0191/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0194",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0194/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0194/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0194/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0196",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0196/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0196/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0196/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0197",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0197/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0197/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0197/episode_0001/video.mp4"
- },
- {
-  "dataset": "robotwin",
-  "task": "task_0198",
-  "episode": "episode_0001",
-  "instruction_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0198/episode_0001/prompt/instruction.txt",
-  "init_frame_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0198/episode_0001/prompt/init_frame.png",
-  "gt_reference_video_url": "https://huggingface.co/datasets/HuggingFriends/mllm-as-embodied-world-judge/resolve/main/data/robotwin/gt_data/task_0198/episode_0001/video.mp4"
  }
 ]
